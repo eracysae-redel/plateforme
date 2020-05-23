@@ -1,3 +1,5 @@
+
+
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
     // User is signed in.
@@ -23,6 +25,7 @@ firebase.auth().onAuthStateChanged(function(user) {
   }
 });
 
+// Fonction de connexion
 function login(){
 
   var userEmail = document.getElementById("email_field").value;
@@ -40,6 +43,19 @@ function login(){
 
 }
 
+//Fonction de déconnexion
 function logout(){
   firebase.auth().signOut();
 }
+
+//Fonction d'INSCRIPTION
+function signUp(){
+
+  var email = document.getElementById("email");
+  var password = document.getElementById("password");
+
+  const promise = auth.createUserWithEmailAndPassword(email.value, password.value);
+
+  promise.catch(e => alert(e.message));
+
+  alert("Signed Up")
