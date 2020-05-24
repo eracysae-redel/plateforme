@@ -1,9 +1,14 @@
 body {
-  background: #fff;
-  padding: 0px;
-  margin: 0px;
+  background:   #d5f5e3  !important;
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
+}
+
+.entry {
+  padding: 4vh;
+  margin: 2vh;
+  background-color: white;
+  border-radius: 15px;
 }
 
 input, button {
