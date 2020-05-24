@@ -1,0 +1,35 @@
+<html>
+<head>
+  <title>Firebase Login</title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <div id="login_div" class="main-div">
+    <h3>Connexion</h3>
+    <input type="Adresse Email" placeholder="Email..." id="email_field" />
+    <input type="Mot de Passe" placeholder="Password..." id="password_field" />
+
+    <button onclick="login()">connexion</button>
+  </div>
+
+  <script type="text/javascript" src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+  <script type="text/javascript">
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBfL7v9RPTss2chnnn7yQaG37BvWnhZiGs",
+      authDomain: "plateforme-96b58.firebaseapp.com",
+      databaseURL: "https://plateforme-96b58.firebaseio.com/",
+      projectId: "plateforme-96b58",
+      storageBucket: "plateforme-96b58.appspot.com",
+      messagingSenderId: "198670684474",
+      appId: "1:198670684474:web:ad5448b601c3c534000003",
+      measurementId: "G-KZ89B3S9VM"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script type="text/javascript" src="js/main.js"></script>
+
+</body>
+</html>
