@@ -8,6 +8,9 @@
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-firestore.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.14.6/firebase-auth.js"></script>
+    <script type="text/javascript" src="js/main.js">
+
+    </script>
 
 </head>
 
@@ -22,10 +25,31 @@
         <h4>Né(e) le</h4>
     </div>
     <div class="col-4">
-        <input class="form-control" type="text" name="" value="">
+        <input class="form-control" id="rq1" type="text" name="" value="">
     </div>
+    <button type="button" id="envoi" name="button">envoyer</button>
 </div>
 </div>
+
+<script type="text/javascript">
+
+const docRef = firestore.doc("questionnaire/reponses");
+const crq1 = docuement.querySelector("#rq1");
+const cenvoi = document.querySelector("#envoi");
+
+cenvoi.addEventListener("click", function() {
+  const textarecup = crq1.value;
+  console.log("la valeur : " + textarecup + "a été envoyée sur la base de données.")
+
+});
+
+
+
+
+
+
+
+</script>
 
 <!-- Entrée 2 -->
 <div class="container text-center shadow entry">
