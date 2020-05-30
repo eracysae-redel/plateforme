@@ -44,7 +44,7 @@ var config = {
   measurementId: "G-KZ89B3S9VM"
 };
 firebase.initializeApp(config);
-
+var firestore = firebase.firestore();
 
 const docRef = firestore.doc("questionnaire/reponses");
 const crq1 = docuement.querySelector("#rq1");
