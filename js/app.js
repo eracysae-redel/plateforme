@@ -21,7 +21,7 @@ send.addEventListener("click", function() {
   const textToSave = input.value;
   console.log("l'envoi est" + textToSave);
   docRef.set({
-    Donnée: textToSave
+    aĝe: textToSave
 
   }).then(function() {
     console.log("envoyé!");
