@@ -46,6 +46,10 @@ var config = {
 firebase.initializeApp(config);
 var firestore = firebase.firestore();
 
+const firebase = require("firebase");
+// Required for side-effects
+require("firebase/firestore");
+
 const docRef = firestore.doc("questionnaire/reponses");
 const crq1 = docuement.querySelector("#rq1");
 const cenvoi = document.querySelector("#envoi");
