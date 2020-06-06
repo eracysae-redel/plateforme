@@ -29,6 +29,5 @@ send.addEventListener("click", function() {
     console.log("got an error", error);
  });
 
-$('#dp1').datepicker();
 
 })
