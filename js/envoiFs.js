@@ -19,7 +19,7 @@ const send = document.querySelector("#go");
 
 send.addEventListener("click", function() {
   const textToSave = input.value;
-  console.log("l'envoi est" + textToSave);
+  console.log("l'envoi est " + textToSave);
   docRef.set({
     aĝe: textToSave
 
@@ -28,9 +28,4 @@ send.addEventListener("click", function() {
   }).then(function (error) {
     console.log("got an error", error);
  });
-
- // Data Picker Initialization
-$('.datepicker').datepicker();
  });
-
-})
