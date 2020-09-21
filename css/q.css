@@ -1,4 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
 body {
       background: linear-gradient(#e66465, #9198e5);
       background-attachment: fixed;
+      font-family: 'Open Sans', sans-serif;
+}
+
+.fci {
+      font-size: 400px;
 }
