@@ -1,72 +1,75 @@
-var firebaseConfig = {
-  apiKey: "AIzaSyBfL7v9RPTss2chnnn7yQaG37BvWnhZiGs",
-  authDomain: "plateforme-96b58.firebaseapp.com",
-  databaseURL: "https://plateforme-96b58.firebaseio.com",
-  projectId: "plateforme-96b58",
-  storageBucket: "plateforme-96b58.appspot.com",
-  messagingSenderId: "198670684474",
-  appId: "1:198670684474:web:ad5448b601c3c534000003",
-  measurementId: "G-KZ89B3S9VM"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
 
-// Authentification par un lien e-mail.
 
-// Confirmation du protocol d'authentification par un lien e-mail.
-if (firebase.auth().isSignInWithEmailLink(window.location.href)) {
-  // Des paramètres d'état supplémentaires peuvent également être transmis via l'URL.
-  // Ceci peut être utilisé pour continuer l'action prévue par l'utilisateur avant le déclenchement l'opération de connexion.
-  // Obtenez l'e-mail si disponible. Cela devrait être disponible si l'utilisateur termine le flux sur le même périphérique où ils l'ont démarré.
+function getClientType () {
 
-  var email = window.localStorage.getItem('emailForSignIn');
-  if (!email) {
-    // L'utilisateur a ouvert le lien sur un autre appareil. Pour empêcher la fixation de la session
-    // attaques, demandez à l'utilisateur de fournir à nouveau l'e-mail associé. Par exemple:
-    email = window.prompt('Veuillez entrer votre adresse email pour confirmation');
+  if(document.getElementById('option1').value) {
+
+      return document.getElementById('option1').value;
+
+  } else if (document.getElementById('option2').value){
+
+      return document.getElementById('option2').value;
+  } else {
+
+    return 0;
   }
-  // Le SDK client analysera le code du lien pour vous.
-  firebase.auth().signInWithEmailLink(email, window.location.href)
-    .then(function(result) {
-      // Efface les e-mails du stockage.
-      window.localStorage.removeItem('emailForSignIn');
-      // Vous pouvez accéder au nouvel utilisateur via : result.user
-      // Profil d'informations utilisateur supplémentaire non disponible via: result.additionalUserInfo.profile == null
-      // Vous pouvez vérifier si l'utilisateur est nouveau ou existant: result.additionalUserInfo.isNewUser
-
-    })
-    .catch(function(error) {
-      // Une erreur s'est produite, vous pouvez inspecter le code: error.code
-      // Les erreurs courantes peuvent être des e-mails non valides et des OTP non valides ou expirés.
-
-    });
-    // Deconnection.
-    firebase.auth().signOut().then(function() {
-
-    }).catch(function(error) {
-
-    });
 
 }
 
+function getUserId() {
 
-firebase.initializeApp(firebaseConfig);
-var firestore = firebase.firestore();
+  if(document.getElementById('fName').value && document.getElementById('name').value ) {
 
-const docRef = firestore.doc("01juin/16h");
+    const firstLetter = document.getElementById('fName').value.substring(0, 1).toUpperCase();
+    const name = document.getElementById('name').value.toUpperCase();
+    const userId = firstLetter + name;
 
-const input = document.querySelector("#entry");
-const send = document.querySelector("#go");
+    return userId;
 
-send.addEventListener("click", function() {
-  const textToSave = input.value;
-  console.log("l'envoi est " + textToSave);
-  docRef.set({
-    aĝe: textToSave
+  } else {
 
-  }).then(function() {
-    console.log("envoyé!");
-  }).then(function (error) {
-    console.log("got an error", error);
- });
- });
+    return 0;
+  }
+
+}
+
+function writeUserData() {
+
+  const userId = getUserId();
+  const clientType = getClientType();
+
+  var db = firebase.database();
+
+  db.ref('users/').child(userId).set(null);
+  db.ref('users/'+userId).child('Situation 1').set(null);
+
+  const ref = db.ref("users/"+userId+"/situation 1");
+
+  db.ref(ref).set({
+        "nom": document.getElementById('name').value,
+        "prenom": document.getElementById('fName').value,
+        "civilite": document.getElementById('gender').value,
+        "nomDeNaissance": document.getElementById('bName').value,
+        "refClient": document.getElementById('refClient').value,
+        "typeClient": document.getElementById('clientType').value,
+        "dateNaissance": document.getElementById('birthday').value,
+        "departementNaissance": document.getElementById('bDpt').value,
+        "adresse": document.getElementById('address').value,
+        "codePostal": document.getElementById('postal').value,
+        "ville": document.getElementById('city').value,
+        "pays": document.getElementById('country').value,
+        "telFixe": document.getElementById('hTel').value,
+        "telMobile": document.getElementById('mTel').value,
+        "mail": document.getElementById('email').value,
+        "residenceFiscale": document.getElementById('rCountry').value
+  });
+}
+
+const submit = document.getElementById('submit');
+
+submit.addEventListener('click',function () {
+
+    writeUserData();
+
+})
+
