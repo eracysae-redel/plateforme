@@ -1060,7 +1060,7 @@
 <h6>Régime:</h6>
   </div>
   <div class="col">
-<h6>Depuis:</h6>
+<h6b hidden>Depuis:</h6>
   </div>
 
   </div>
@@ -1078,7 +1078,9 @@
     </select>
   </div>
   <div class="col">
-    <input id="dateMariage" type="date" required class="form-control mb-3">
+    <input hidden id="dateMariage" type="date" required class="form-control mb-3">
+    <input hidden id="datePacs" type="date" required class="form-control mb-3">
+    <input hidden id="dateDivorce" type="date" required class="form-control mb-3">
   </div>
 </div>
 <div class="row">
@@ -1086,13 +1088,39 @@
   <div class="col">
   <h6>Contrat de Mariage?</h6>
   <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="contrat" value="option1">
   <label class="form-check-label" for="exampleRadios1">
     Oui
   </label>
 </div>
 <div class="form-check">
-  <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="pasContrat" value="option2">
+  <label class="form-check-label" for="exampleRadios2">
+    Non
+  </label>
+</div>
+</div>
+<div class="col">
+  <select class="form-control" id="reégimeMariage">
+    <option value="" selected disabled>Type de Contrat</option>
+    <option value="Communauté des biens">Communauté des biens</option>
+    <option value="Séparation des biens">Séparation des biens</option>
+    <option value="participation aux acquêts">Participation aux acquêts</option>
+  </select>
+</div>
+</div>
+<div class="row">
+
+  <div class="col">
+  <h6>Convetion de Pacs?</h6>
+  <div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="Convention" value="option1">
+  <label class="form-check-label" for="exampleRadios1">
+    Oui
+  </label>
+</div>
+<div class="form-check">
+  <input class="form-check-input" type="radio" name="exampleRadios" id="pasConvention" value="option2">
   <label class="form-check-label" for="exampleRadios2">
     Non
   </label>
