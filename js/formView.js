@@ -44,4 +44,3 @@ situation.addEventListener("change",function (e){
             break;
     }
 });
-
