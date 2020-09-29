@@ -13,7 +13,6 @@ function getClientType () {
 
     return 0;
   }
-
 }
 
 function getUserId() {

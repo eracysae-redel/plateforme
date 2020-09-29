@@ -12,3 +12,38 @@ situation.addEventListener("change",function (e){
     }
 });
 
+situation.addEventListener("change",function (e){
+
+    const mariage = document.getElementById('mariage');
+    const pacs = document.getElementById('pacs');
+    const divorce = document.getElementById('divorce')
+
+    switch (e.target.value) {
+        case "Mariage" :
+            mariage.removeAttribute("hidden");
+            pacs.setAttribute("hidden",true);
+            divorce.setAttribute('hidden',true);
+            break;
+
+        case "Pacs" :
+            pacs.removeAttribute("hidden");
+            mariage.setAttribute("hidden",true);
+            divorce.setAttribute('hidden',true);
+            break;
+
+        case "Divorcé" :
+            divorce.removeAttribute("hidden");
+            pacs.setAttribute("hidden",true);
+            mariage.setAttribute('hidden',true);
+            break;
+
+        default :
+            mariage.setAttribute("hidden",true);
+            pacs.setAttribute("hidden",true);
+            divorce.setAttribute('hidden',true);
+            break;
+    }
+
+
+});
+
