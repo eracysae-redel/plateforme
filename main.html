@@ -1060,7 +1060,7 @@
 <h6>Régime:</h6>
   </div>
   <div class="col">
-<h6b hidden>Depuis:</h6>
+<h6 hidden id="depuis" >Depuis:</h6>
   </div>
 
   </div>
@@ -1077,13 +1077,18 @@
       <option value="Union libre">Union libre</option>
     </select>
   </div>
+  </div>
+
+<div class="row">
+
+</div>
   <div class="col">
     <input hidden id="dateMariage" type="date" required class="form-control mb-3">
     <input hidden id="datePacs" type="date" required class="form-control mb-3">
     <input hidden id="dateDivorce" type="date" required class="form-control mb-3">
   </div>
-</div>
-<div class="row">
+
+<div id="contratMariage" class="row">
 
   <div class="col">
   <h6>Contrat de Mariage?</h6>
@@ -1101,7 +1106,7 @@
 </div>
 </div>
 <div class="col">
-  <select class="form-control" id="reégimeMariage">
+  <select class="form-control" id="régimeMariage">
     <option value="" selected disabled>Type de Contrat</option>
     <option value="Communauté des biens">Communauté des biens</option>
     <option value="Séparation des biens">Séparation des biens</option>
