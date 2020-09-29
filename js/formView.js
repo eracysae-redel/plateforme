@@ -43,7 +43,5 @@ situation.addEventListener("change",function (e){
             divorce.setAttribute('hidden',true);
             break;
     }
-
-
 });
 
