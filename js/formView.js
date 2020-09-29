@@ -1,12 +1,37 @@
 
-const mariage = document.getElementById("situationMatri");
+const situation = document.getElementById("situationMatri");
 
-mariage.addEventListener("change",function (e){
+situation.addEventListener("change",function (e){
 
-    if (e.target.value === "Mariage") {
+    switch (e.target.value) {
+        case 'Mariage' :
+            document.getElementById('dateMariage').removeAttribute("hidden");
+            document.getElementById('depuis').removeAttribute("hidden");
+            document.getElementById('datePacs').setAttribute("hidden",true);
+            document.getElementById('dateDivorce').setAttribute("hidden",true);
+            break;
 
-        document.getElementById('dateMariage').removeAttribute("hidden");
-    } else {
-        document.getElementById('dateMariage').setAttribute("hidden",true);
+        case 'Pacs' :
+            document.getElementById('datePacs').removeAttribute("hidden");
+            document.getElementById('depuis').removeAttribute("hidden");
+            document.getElementById('dateMariage').setAttribute("hidden",true);
+            document.getElementById('dateDivorce').setAttribute("hidden",true);
+            break;
+
+        case 'Divorcé' :
+            document.getElementById('dateDivorce').removeAttribute("hidden");
+            document.getElementById('depuis').removeAttribute("hidden");
+            document.getElementById('dateMariage').setAttribute("hidden",true);
+            document.getElementById('datePacs').setAttribute("hidden",true);
+            break;
+
+        default :
+            document.getElementById('dateMariage').setAttribute("hidden",true);
+            document.getElementById('datePacs').setAttribute("hidden",true);
+            document.getElementById('dateDivorce').setAttribute("hidden",true);
+            document.getElementById('depuis').setAttribute("hidden",true);
+            break;
+
     }
 });
+
