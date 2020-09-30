@@ -10,9 +10,13 @@
 </head>
 
 <body>
+
+  <div id="marmots">
+    
+  </div>
   <!-- <input type="textfield" id="entry">
 <button type="button"class="btn btn-success" id="go" name="button">envoyer</button> -->
-<div class="container">
+  <div class="container">
     <!-- Button trigger modal -->
     <div class="row">
       <div class="col">
@@ -40,164 +44,164 @@
 
   </div>
 
-<div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-<div class="modal-dialog modal-dialog-scrollable">
-<div class="modal-content">
-<div class="modal-header">
-<h3 class="modal-title text-dark" id="staticBackdropLabel">Famille</h3>
-<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-</div>
+  <div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title text-dark" id="staticBackdropLabel">Famille</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        </div>
 
-<div class="modal-body">
-<!-- Modal 2 : Situation Familliale -->
-<h3 class="mb-3 text-center text-info">Situation Matrimoniale</h3>
+        <div class="modal-body">
+          <!-- Modal 2 : Situation Familliale -->
+          <h3 class="mb-3 text-center text-info">Situation Matrimoniale</h3>
 
-<div class="row">
-  <div class="col">
-    <select class="form-control mb-3" id="situationMatri">
-      <option value="" selected disabled>Non renseigné</option>
-      <option value="Mariage">Marié(é)</option>
-      <option value="Pacs">Pacsé(é)</option>
-      <option value="Celibataire">Célibataire</option>
-      <option value="Veuf">Veuf(ve)</option>
-      <option value="Divorcé">Divorcé(e)</option>
-      <option value="Union libre">Union libre</option>
-    </select>
-  </div>
-</div>
-
-
-
-<div id="mariage" hidden class="row">
-  <div class="col">
-    <div class="form-group">
-      <label for="exampleInputPassword1">Depuis?</label>
-      <input type="date" class="form-control" id="exampleInputPassword1">
-    </div>
-  </div>
-  <div class="col">
-    <div class="form-group">
-      <label for="exampleInputPassword1">Contrat?</label>
-      <input type="text" placeholder="Si oui, précisez" class="form-control" id="exampleInputPassword1">
-    </div>
-  </div>
-</div>
+          <div class="row">
+            <div class="col">
+              <select class="form-control mb-3" id="situationMatri">
+                <option value="" selected disabled>Non renseigné</option>
+                <option value="Mariage">Marié(é)</option>
+                <option value="Pacs">Pacsé(é)</option>
+                <option value="Celibataire">Célibataire</option>
+                <option value="Veuf">Veuf(ve)</option>
+                <option value="Divorcé">Divorcé(e)</option>
+                <option value="Union libre">Union libre</option>
+              </select>
+            </div>
+          </div>
 
 
 
-<div id="pacs" hidden class="row">
-  <div class="col">
-    <div class="form-group">
-      <label for="exampleInputPassword1">Depuis?</label>
-      <input type="date" class="form-control" id="exampleInputPassword1">
-    </div>
-  </div>
-  <div class="col">
-    <div class="form-group">
-      <label for="exampleInputPassword1">Convention?</label>
-      <input type="text" placeholder="précisez laquelle" class="form-control" id="exampleInputPassword1">
-    </div>
-  </div>
-</div>
-
-<div id="divorce" hidden class="row">
-  <div class="col">
-    <div class="form-group">
-      <label for="exampleInputPassword1">Depuis?</label>
-      <input type="date" class="form-control" id="exampleInputPassword1">
-    </div>
-  </div>
-</div>
+          <div id="mariage" hidden class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Depuis?</label>
+                <input type="date" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Contrat?</label>
+                <input type="text" placeholder="Si oui, précisez" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+          </div>
 
 
 
-<div hidden id="infoConjoint">
-  <h3 class="text-center text-info mt-5">Indentité Conjoint(e)</h3>
-  <div class="row">
-    <div class="col-sm">
-      <input id="nameConjoint" type="text" required class="form-control mb-3" placeholder="Nom">
-    </div>
-    <div class="col-sm">
-      <input id="fNameConjoint" type="text" required class="form-control mb-3" placeholder="Prenom">
-    </div>
-  </div>
+          <div id="pacs" hidden class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Depuis?</label>
+                <input type="date" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+            <div class="col">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Convention?</label>
+                <input type="text" placeholder="précisez laquelle" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+          </div>
 
-  <div class="row">
-    <div class="col-sm">
-      <select class="form-control mb-3" id="genderConjoint">
-        <option>Civilité</option>
-        <option value="Mme">Madame</option>
-        <option value="M">Monsieur</option>
-      </select>
-    </div>
-    <div class="col-sm">
-      <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Nom de Naissance">
-    </div>
-  </div>
+          <div id="divorce" hidden class="row">
+            <div class="col">
+              <div class="form-group">
+                <label for="exampleInputPassword1">Depuis?</label>
+                <input type="date" class="form-control" id="exampleInputPassword1">
+              </div>
+            </div>
+          </div>
 
-  <!-- type client?
+
+
+          <div hidden id="infoConjoint">
+            <h3 class="text-center text-info mt-5">Indentité Conjoint(e)</h3>
+            <div class="row">
+              <div class="col-sm">
+                <input id="nameConjoint" type="text" required class="form-control mb-3" placeholder="Nom">
+              </div>
+              <div class="col-sm">
+                <input id="fNameConjoint" type="text" required class="form-control mb-3" placeholder="Prenom">
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm">
+                <select class="form-control mb-3" id="genderConjoint">
+                  <option>Civilité</option>
+                  <option value="Mme">Madame</option>
+                  <option value="M">Monsieur</option>
+                </select>
+              </div>
+              <div class="col-sm">
+                <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Nom de Naissance">
+              </div>
+            </div>
+
+            <!-- type client?
 id="refClient" -->
 
-  <div class="row">
-    <div class="col">
-      <h6>Capacité juridique:</h6>
+            <div class="row">
+              <div class="col">
+                <h6>Capacité juridique:</h6>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col">
+                <select class="form-control mb-3" id="legalCapacityConjoint">
+                  <option value="" selected disabled>Non renseigné</option>
+                  <option>Majeur Capable</option>
+                  <option>Tutelle</option>
+                  <option>Curatelle</option>
+                </select>
+              </div>
+            </div>
+            <h3 class="text-center text-info">Naissance conjoint(e)</h3>
+
+            <!-- Naissaonce JS spécial-->
+            <!-- departement de naissance -->
+            <div class="row">
+              <div class="col">
+                <h6>Date de naissance:</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col">
+                <input id="birthdayConjoint" type="date" class="form-control mb-3" value="1960-01-01">
+
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-sm">
+                <h6 class="text-dark">Lieu de naissance:</h6>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm">
+                <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
+              </div>
+            </div>
+          </div>
+
+          <h3 class="mt-5 mb-2 text-center text-info">Enfants, personnes à charge</h3>
+          <div class="row">
+            <div class="col-sm">
+
+            </div>
+          </div>
+
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-success" disabled="true" id="submit">Sauvegarder</button>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <div class="row">
-    <div class="col">
-      <select class="form-control mb-3" id="legalCapacityConjoint">
-        <option value="" selected disabled>Non renseigné</option>
-        <option>Majeur Capable</option>
-        <option>Tutelle</option>
-        <option>Curatelle</option>
-      </select>
-    </div>
-  </div>
-  <h3 class="text-center text-info">Naissance conjoint(e)</h3>
-
-  <!-- Naissaonce JS spécial-->
-  <!-- departement de naissance -->
-  <div class="row">
-    <div class="col">
-      <h6>Date de naissance:</h6>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col">
-      <input id="birthdayConjoint" type="date" class="form-control mb-3" value="1960-01-01">
-
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-sm">
-      <h6 class="text-dark">Lieu de naissance:</h6>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm">
-      <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
-    </div>
-  </div>
-</div>
-
-<h3 class="mt-5 mb-2 text-center text-info">Enfants, personnes à charge</h3>
-<div class="row">
-  <div class="col-sm">
-    
-  </div>
-</div>
-
-
-<div class="modal-footer">
-  <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-  <button type="button" class="btn btn-success" disabled="true" id="submit">Sauvegarder</button>
-</div>
-</div>
-</div>
-</div>
-</div>
 
   <!-- Modal 1 : Situation Personnelle 1/2 -->
   <div class="modal fade" id="modalEtatCivil" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
