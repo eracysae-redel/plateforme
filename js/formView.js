@@ -49,3 +49,37 @@ situation.addEventListener("change",function (e){
             break;
     }
 });
+
+let counter = 0;
+
+function supprChildren(child){
+
+    counter --;
+    const parent = child.parentNode;
+    parent.parentNode.removeChild(parent)
+
+}
+
+function addChildren(){
+
+    counter++;
+    const parent = document.getElementById("enfant");
+    const div = document.createElement('div');
+    const divName = 'enfant'+counter;
+    div.setAttribute('id',divName);
+    content = div.innerHTML;
+
+    div.innerHTML = content;
+    parent.appendChild(div);
+
+}
+
+const buttonEnfant = document.getElementById('addEnfant');
+
+buttonEnfant.addEventListener('click',function (){
+
+    addChildren();
+
+});
+
+

@@ -61,7 +61,6 @@ function writeUserData() {
   });
 }
 
-
 // évènement d'envoie des données au clic du bouton sauvegarder (id : submit).
 const submit = document.getElementById('submit');
 
