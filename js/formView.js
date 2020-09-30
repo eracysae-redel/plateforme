@@ -17,16 +17,19 @@ situation.addEventListener("change",function (e){
     const mariage = document.getElementById('mariage');
     const pacs = document.getElementById('pacs');
     const divorce = document.getElementById('divorce')
+    const infoConjoint = document.getElementById('infoConjoint')
 
     switch (e.target.value) {
         case "Mariage" :
             mariage.removeAttribute("hidden");
+            infoConjoint.removeAttribute("hidden");
             pacs.setAttribute("hidden",true);
             divorce.setAttribute('hidden',true);
             break;
 
         case "Pacs" :
             pacs.removeAttribute("hidden");
+            infoConjoint.removeAttribute("hidden");
             mariage.setAttribute("hidden",true);
             divorce.setAttribute('hidden',true);
             break;
@@ -35,10 +38,12 @@ situation.addEventListener("change",function (e){
             divorce.removeAttribute("hidden");
             pacs.setAttribute("hidden",true);
             mariage.setAttribute('hidden',true);
+            infoConjoint.setAttribute("hidden",true);
             break;
 
         default :
             mariage.setAttribute("hidden",true);
+            infoConjoint.setAttribute("hidden",true);
             pacs.setAttribute("hidden",true);
             divorce.setAttribute('hidden',true);
             break;
