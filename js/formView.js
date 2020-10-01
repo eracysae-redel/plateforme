@@ -58,7 +58,8 @@ function supprChildren(child){
     for(let i = 1; i<=counter; i++) {
         if(id === 'addChild'+i) {
             const parent = document.getElementById('enfants');
-            parent.removeChild(parent.childNodes[i]);
+            const enfant = document.getElementById('marmot'+counter);
+            parent.removeChild(enfant);
             break;
         }
     }
