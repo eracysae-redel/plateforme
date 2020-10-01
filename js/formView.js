@@ -55,8 +55,13 @@ let counter = 1;
 function supprChildren(child){
 
     const id = child.id;
-    alert(id);
-
+    for(let i = 1; i<=counter; i++) {
+        if(id === 'addChild'+i) {
+            const parent = document.getElementById('enfants');
+            parent.removeChild(parent.childNodes[i]);
+            break;
+        }
+    }
 }
 
 function addChildren(){
@@ -128,7 +133,7 @@ function addChildren(){
         '      </div>'
 
 
-    target.innerHTML = content;
+    div.innerHTML = content;
     target.appendChild(div);
     counter++;
 
