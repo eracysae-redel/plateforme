@@ -59,7 +59,6 @@ function supprChildren(child){
         if(id === 'addChild'+i) {
             const parent = document.getElementById('enfants');
             const enfant = document.getElementById('marmot'+i);
-
             parent.removeChild(enfant);
             break;
         }
@@ -75,7 +74,7 @@ function addChildren(){
         '          <div class="card-header">\n' +
         '            <div class="row">\n' +
         '            <div class="col-10">\n' +
-        '              <h5>Enfant '+counter+'</h5>\n' +
+        '              <h5>Enfant</h5>\n' +
         '            </div>\n' +
         '            <div class="col-1">\n' +
         '              <svg id="addChild'+counter+'" onclick="supprChildren(this)" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="red" xmlns="http://www.w3.org/2000/svg">\n' +
