@@ -70,68 +70,69 @@ function addChildren(){
     const target = document.getElementById("enfants");
     const div = document.createElement('div');
     div.setAttribute('id','marmot'+counter);
-    let content = '<div class="card bg-light m-2">\n' +
-        '          <div class="card-header">\n' +
-        '            <div class="row">\n' +
-        '            <div class="col-10">\n' +
-        '              <h5>Enfant</h5>\n' +
-        '            </div>\n' +
-        '            <div class="col-1">\n' +
-        '              <svg id="addChild'+counter+'" onclick="supprChildren(this)" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-circle-fill" fill="red" xmlns="http://www.w3.org/2000/svg">\n' +
-        '              <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM5.354 4.646a.5.5 0 1 0-.708.708L7.293 8l-2.647 2.646a.5.5 0 0 0 .708.708L8 8.707l2.646 2.647a.5.5 0 0 0 .708-.708L8.707 8l2.647-2.646a.5.5 0 0 0-.708-.708L8 7.293 5.354 4.646z"/>\n' +
-        '              </svg>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '          </div>\n' +
-        '          <div class="card-body">\n' +
-        '            <p>Informations : </p>\n' +
-        '            <div class="row mb-2">\n' +
-        '              <div class="col">\n' +
-        '                <input class="form-control form-control-sm" type="text" placeholder="Nom">\n' +
-        '              </div>\n' +
-        '              <div class="col">\n' +
-        '                <input class="form-control form-control-sm" type="text" placeholder="Prénom">\n' +
-        '              </div>\n' +
-        '            </div>\n' +
-        '            <div class="row mb-2">\n' +
-        '              <div class="col">\n' +
-        '                <input class="form-control form-control-sm" type="text" placeholder="Lieu Naissance">\n' +
-        '              </div>\n' +
-        '              <div class="col">\n' +
-        '                <input id="dateNaissanceEnfant1" placeholder="Date Naissance" class="form-control form-control-sm" type="text" onfocus="(this.type=\'date\')">\n' +
-        '              </div>\n' +
-        '            </div>\n' +
-        '            <div class="row mt-4 mb-2">\n' +
-        '              <div class="col">\n' +
-        '                <p>Lien de parenté:</p>\n' +
-        '              </div>\n' +
-        '              <div class="col">\n' +
-        '                <select class="form-control form-control-sm" id="">\n' +
-        '                  <option value="" selected disabled>Non renseigné</option>\n' +
-        '                  <option>Enfant du couple</option>\n' +
-        '                  <option>Enfant de votre conjointe uniquement</option>\n' +
-        '                  <option>Votre enfant uniquement</option>\n' +
-        '                </select>\n' +
-        '              </div>\n' +
-        '            </div>\n' +
-        '            <div class="row mt-4 mb-2">\n' +
-        '              <div class="col-8">\n' +
-        '                <p>Dépent il/elle de votre foyer fiscal?</p>\n' +
-        '              </div>\n' +
-        '              <div class="col">\n' +
-        '                  <input type="checkbox" data-size="sm" checked data-toggle="toggle" data-on="Oui" data-off="Non" data-onstyle="success" data-offstyle="danger">\n' +
-        '                </div>\n' +
-        '            </div>\n' +
-        '            <div class="row mb-2">\n' +
-        '              <div class="col">\n' +
-        '\n' +
-        '              </div>\n' +
-        '\n' +
-        '            </div>\n' +
-        '\n' +
-        '          </div>\n' +
-        '        </div>\n' +
-        '      </div>'
+    let content = <div id="marmot3"><div class="card bg-light" style="max-width: 30rem;">
+              <div class="card-header">
+                <div class="row">
+                <div class="col-10">
+                  <h5>Enfant</h5>
+                </div>
+                <div class="col-1">
+                    <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>
+                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                </div>
+              </div>
+              </div>
+              <div class="card-body">
+                <p>Informations : </p>
+                <div class="row mb-2">
+                  <div class="col">
+                    <input class="form-control form-control-sm" type="text" placeholder="Nom">
+                  </div>
+                  <div class="col">
+                    <input class="form-control form-control-sm" type="text" placeholder="Prénom">
+                  </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col">
+                    <input class="form-control form-control-sm" type="text" placeholder="Lieu Naissance">
+                  </div>
+                  <div class="col">
+                    <input id="dateNaissanceEnfant1" placeholder="Date Naissance" class="form-control form-control-sm" type="text" onfocus="(this.type='date')">
+                  </div>
+                </div>
+                <div class="row mt-4 mb-2">
+                  <div class="col">
+                    <p>Lien de parenté:</p>
+                  </div>
+                  <div class="col">
+                    <select class="form-control form-control-sm" id="">
+                      <option value="" selected="" disabled="">Non renseigné</option>
+                      <option>Enfant du couple</option>
+                      <option>Enfant de votre conjointe uniquement</option>
+                      <option>Votre enfant uniquement</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="row mt-4 mb-2">
+                  <div class="col-8">
+                    <p>Dépent il/elle de votre foyer fiscal?</p>
+                  </div>
+                  <div class="col">
+                      <input type="checkbox" data-size="sm" checked data-toggle="toggle" data-on="Oui" data-off="Non" data-onstyle="success" data-offstyle="danger">
+                    </div>
+                </div>
+                <div class="row mb-2">
+                  <div class="col">
+
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
 
 
     div.innerHTML = content;
