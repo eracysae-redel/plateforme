@@ -1,6 +1,14 @@
 body {
   font-family: 'Nunito', sans-serif;
   font-size: 16px;
+  background-color:  #f7f7f7;
+}
+
+.encart {
+  background-color:  white!important;
+  border-radius:10px;
+  border: 1px solid #dee2e6 !important;
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
 }
 
 .entry {

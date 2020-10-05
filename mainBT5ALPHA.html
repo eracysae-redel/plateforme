@@ -78,16 +78,17 @@
         <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
+          <div class="row encart" >
           <div class="row">
             <div class="col">
-              <h4>Votre situation : </h4>
+              <h3 class="text-info text-center">Votre situation</h3>
             </div>
           </div>
           <div class="row mb- 5">
             <div class="col-md">
 
               <label for="">Situation actuelle : </label>
-              <select class="form-control mb-3" id="situPro">
+              <select class="form-select mb-3" id="situPro">
                 <option disabled selected>Non défini</option>
                 <option>En activité</option>
                 <option>Sans profession</option>
@@ -102,13 +103,10 @@
           </div>
           <div class="row">
             <div class="col-md">
-              <p></p>
+              <div class="form-check form-switch mb-3">
+                  <label class="form-check-label" for="flexSwitchCheckDefault">Etes vous dirigeant d'entreprise?</label>
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
             </div>
-            <div class="col-md">
-              <div class="form-check form-switch">
-<input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-<label class="form-check-label" for="flexSwitchCheckDefault">Etes vous chef d'entreprise?</label>
-</div>
             </div>
           </div>
           <div class="row">
@@ -124,12 +122,18 @@
               <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
             </div>
           </div>
-          <div class="row mt-5">
+          </div>
+
+
+
+
+          <div class="row p-3 mb-5 bg-white encart">
+          <div class="row">
             <div class="col">
-              <h4>Situation du/de la Conjoint(e) : </h4>
+              <h3 class="text-info text-center">Situation conjoint(e)</h3>
             </div>
           </div>
-          <div class="row mb- 5">
+          <div class="row mb-5">
             <div class="col-md">
 
               <label for="">Situation actuelle : </label>
@@ -148,7 +152,7 @@
           </div>
           <div class="row">
             <div class="col-md">
-              <p>Est il/elle chef d'entreprise?</p>
+              <p>Est il/elle chef d'entreprise ?</p>
             </div>
             <div class="col-md">
               <input class="pt-1" type="checkbox" data-size="sm" data-toggle="toggle" data-on="Oui" data-off="Non" data-onstyle="success" data-offstyle="danger">
@@ -167,6 +171,7 @@
               <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
             </div>
           </div>
+        </div>
         </div>
       </div>
     </div>
