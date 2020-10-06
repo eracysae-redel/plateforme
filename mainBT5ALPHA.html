@@ -83,7 +83,7 @@
             <div class="col-md">
               <div class="form-check form-switch mb-3">
                   <label class="form-check-label" for="flexSwitchCheckDefault">Etes vous dirigeant d'entreprise?</label>
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                  <input class="form-check-input" type="checkbox" id="dirigeant">
             </div>
             </div>
           </div>
@@ -111,11 +111,11 @@
               <h3 class="text-info text-center">Situation conjoint(e)</h3>
             </div>
           </div>
-          <div class="row ">
+          <div class="row">
             <div class="col-md">
 
               <label for="">Situation actuelle : </label>
-              <select class="form-control mb-3" id="situPro">
+              <select class="form-select mb-3" id="sqsituPro">
                 <option disabled selected>Non défini</option>
                 <option>En activité</option>
                 <option>Sans profession</option>
@@ -132,7 +132,7 @@
             <div class="col-md">
               <div class="form-check form-switch mb-3">
                   <label class="form-check-label" for="flexSwitchCheckDefault">Est il/elle dirigeant(e)?</label>
-                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                  <input class="form-check-input" type="checkbox" id="conjointDirigeant">
             </div>
             </div>
           </div>
@@ -149,7 +149,27 @@
               <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
             </div>
           </div>
+
+
         </div>
+        <div class="row encart m-1 py-3 mb-5">
+
+
+        <div class="row">
+          <div class="col">
+            <h3 class="text-info text-center">Situation conjoint(e)</h3>
+          </div>
+        </div>
+        <div class="row ">
+          <div class="col-md">
+
+            <label for="">Informations suceptibles d'influencer votre situation patrimoniale actuelle ou future</label>
+            <div class="input-group">
+              <textarea class="form-control" aria-label="With textarea"></textarea>
+            </div>
+          </div>
+      </div>
+      </div>
         </div>
         <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
@@ -169,6 +189,7 @@
 
         <div class="modal-body">
           <!-- Modal 2 : Situation Familliale -->
+          <div class="row encart m-1 py-3 mb-5">
           <h3 class="mb-3 text-center text-info">Situation Matrimoniale</h3>
 
 
@@ -300,7 +321,9 @@
               </div>
             </div>
           </div>
+</div>
 
+<div class="row encart m-1 py-3 mb-5">
           <h3 class="mt-5 mb-3 text-center text-info">Enfants, personnes à charge</h3>
 
 
@@ -314,6 +337,7 @@
 
             </div>
 
+          </div>
           </div>
 
 
