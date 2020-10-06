@@ -86,7 +86,7 @@ function addChildren(){
     const target = document.getElementById("enfants");
     const div = document.createElement('div');
     div.setAttribute('id','marmot'+counter);
-    let content = '<div class="card bg-light mb-2" style="max-width: 30rem;">\n' +
+    let content = '<div class="card bg-light mb-5 ml-3 text-center">\n' +
         '              <div class="card-header">\n' +
         '                <div class="row">\n' +
         '                <div class="col-10">\n' +
