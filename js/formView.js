@@ -1,16 +1,7 @@
 
 const situation = document.getElementById("situationMatri");
 
-situation.addEventListener("change",function (e){
 
-    if (e.target.value === "Mariage" || e.target.value === "Divorcé" || e.target.value === "Pacs"  ) {
-        document.getElementById('dateSituation').removeAttribute("hidden");
-        document.getElementById('depuis').removeAttribute("hidden");
-    } else {
-        document.getElementById('dateSituation').setAttribute("hidden",true);
-        document.getElementById('depuis').setAttribute("hidden",true);
-    }
-});
 
 situation.addEventListener("change",function (e){
 
@@ -50,23 +41,48 @@ situation.addEventListener("change",function (e){
     }
 });
 
-let counter = 1;
+let counter = 0;
 
 function supprChildren(child){
+
 
     const id = child.id;
     for(let i = 1; i<=counter; i++) {
         if(id === 'addChild'+i) {
+
             const parent = document.getElementById('enfants');
-            const enfant = document.getElementById('marmot'+i);
+            const enfant = document.getElementById('marmot' + i);
             parent.removeChild(enfant);
-            break;
+            counter--;
+
+            if(counter !== 0) {
+                for (let j = i; j <= counter; j++) {
+                    if (counter === 1) {
+                        document.getElementById('addChild' + (j+1)).setAttribute('id', 'addChild1');
+                        document.getElementById('marmot' + (j+1)).setAttribute('id', 'marmot1');
+                        document.getElementById('hName' + (j+1)).innerHTML = 'Enfant 1';
+                        document.getElementById('hName' + (j+1)).setAttribute('id','hName1');
+                        break;
+
+                    } else {
+
+                        document.getElementById('addChild' + (j + 1)).setAttribute('id', 'addChild' + j);
+                        document.getElementById('marmot' + (j + 1)).setAttribute('id', 'marmot' + j);
+                        document.getElementById('hName' + (j + 1)).innerHTML = 'Enfant ' + j;
+                        document.getElementById('hName' + (j +1)).setAttribute('id','hName' + j);
+                    }
+                }
+
+                break;
+            }
         }
     }
 }
 
 function addChildren(){
 
+    counter++;
+    const nom = 'Enfant ';
     const target = document.getElementById("enfants");
     const div = document.createElement('div');
     div.setAttribute('id','marmot'+counter);
@@ -74,10 +90,10 @@ function addChildren(){
         '              <div class="card-header">\n' +
         '                <div class="row">\n' +
         '                <div class="col-10">\n' +
-        '                  <h5>Enfant</h5>\n' +
+        '                  <h5 id="hName'+counter+'">'+nom+counter+'</h5>\n' +
         '                </div>\n' +
         '                <div class="col-1">\n' +
-        '                    <svg onclick="supprChildren(this)" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
+        '                    <svg id="addChild'+counter+'" onclick="supprChildren(this)" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
         '                    <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>\n' +
         '                    <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>\n' +
         '                    </svg>\n' +
@@ -136,7 +152,6 @@ function addChildren(){
 
     div.innerHTML = content;
     target.appendChild(div);
-    counter++;
 
 }
 
