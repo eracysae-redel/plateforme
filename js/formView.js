@@ -86,64 +86,58 @@ function addChildren(){
     const target = document.getElementById("enfants");
     const div = document.createElement('div');
     div.setAttribute('id','marmot'+counter);
-    let content = '<div class="card bg-light mx-auto mb-3" style="max-width: 30rem;">\n' +
-        '          <div class="card-header">\n' +
-        '          <div class="row">\n' +
-        '            <div class="col-10">\n' +
-        '              <h5 id="hName'+counter+'">Enfant '+counter+'</h5>\n' +
-        '            </div>\n' +
-        '            <div class="col-1">\n' +
-        '                <svg id="addChild'+counter+'" onclick="supprChildren(this)" width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
-        '                <path fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>\n' +
+    let content = '<div class="card-header">\n' +
+        '    <div class="row">\n' +
+        '        <div class="col-10">\n' +
+        '            <h5 id="hName'+counter+'">Enfant</h5>\n' +
+        '        </div>\n' +
+        '        <div class="col-1">\n' +
+        '            <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-x-square" fill="currentColor" xmlns="http://www.w3.org/2000/svg">\n' +
+        '                <path id="addChild'+counter+'" onclick="supprChildren(this)" fill-rule="evenodd" d="M14 1H2a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2z"/>\n' +
         '                <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>\n' +
-        '                </svg>\n' +
-        '            </div>\n' +
-        '          </div>\n' +
-        '          </div>\n' +
-        '          <div class="card-body">\n' +
-        '            <p>Informations : </p>\n' +
-        '            <div class="row mb-2">\n' +
-        '              <div class="col">\n' +
+        '            </svg>\n' +
+        '        </div>\n' +
+        '    </div>\n' +
+        '</div>\n' +
+        '    <div class="card-body">\n' +
+        '        <p>Informations : </p>\n' +
+        '        <div class="row mb-2">\n' +
+        '            <div class="col">\n' +
         '                <input class="form-control form-control-sm" type="text" placeholder="Nom">\n' +
-        '              </div>\n' +
-        '              <div class="col">\n' +
+        '            </div>\n' +
+        '            <div class="col">\n' +
         '                <input class="form-control form-control-sm" type="text" placeholder="Prénom">\n' +
-        '              </div>\n' +
         '            </div>\n' +
-        '            <div class="row mb-2">\n' +
-        '              <div class="col">\n' +
+        '        </div>\n' +
+        '        <div class="row mb-2">\n' +
+        '            <div class="col">\n' +
         '                <input class="form-control form-control-sm" type="text" placeholder="Lieu Naissance">\n' +
-        '              </div>\n' +
-        '              <div class="col">\n' +
+        '            </div>\n' +
+        '            <div class="col">\n' +
         '                <input id="dateNaissanceEnfant1" placeholder="Date Naissance" class="form-control form-control-sm" type="text" onfocus="(this.type=\'date\')">\n' +
-        '              </div>\n' +
         '            </div>\n' +
-        '            <div class="row mt-4 mb-2">\n' +
-        '              <div class="col">\n' +
+        '        </div>\n' +
+        '        <div class="row mt-4 mb-2">\n' +
+        '            <div class="col">\n' +
         '                <p>Lien de parenté:</p>\n' +
-        '              </div>\n' +
-        '              <div class="col">\n' +
+        '            </div>\n' +
+        '            <div class="col">\n' +
         '                <select class="form-select form-select-sm" id="">\n' +
-        '                  <option value="" selected="" disabled="">Non renseigné</option>\n' +
-        '                  <option>Enfant du couple</option>\n' +
-        '                  <option>Enfant de votre conjointe uniquement</option>\n' +
-        '                  <option>Votre enfant uniquement</option>\n' +
+        '                    <option value="" selected="" disabled="">Non renseigné</option>\n' +
+        '                    <option>Enfant du couple</option>\n' +
+        '                    <option>Enfant de votre conjointe uniquement</option>\n' +
+        '                    <option>Votre enfant uniquement</option>\n' +
         '                </select>\n' +
-        '              </div>\n' +
         '            </div>\n' +
-        '            <div class="row my-3 ml-1">\n' +
-        '              <div class="form-check form-switch mb-3">\n' +
-        '                  <label class="form-check-label" for="flexSwitchCheckDefault">Dépent il/elle de votre foyer fiscal?</label>\n' +
-        '                  <input class="form-check-input" type="checkbox" id="foyerfical">\n' +
+        '        </div>\n' +
+        '        <div class="row my-3 ml-1">\n' +
+        '            <div class="form-check form-switch">\n' +
+        '                <input class="form-check-input" type="checkbox" id="foyerfical">\n' +
+        '                <label class="form-check-label" for="foyerfical">Dépent il/elle de votre foyer fiscal?</label>\n' +
         '            </div>\n' +
-        '            </div>\n' +
+        '        </div>\n' +
         '\n' +
-        '            </div>\n' +
-        '\n' +
-        '          </div>\n' +
-        '        </div>'
-
-
+        '    </div>'
     div.innerHTML = content;
     target.appendChild(div);
 
