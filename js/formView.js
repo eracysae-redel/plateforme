@@ -177,3 +177,14 @@ toggleConjoint.addEventListener('change',function (){
         document.getElementById('conjointEntreprise').setAttribute('hidden',true);
     }
 });
+
+const modalPro = document.getElementById('modalProfessionnel');
+
+modalPro.addEventListener('click',function () {
+
+    if (sessionStorage.getItem('mariage') === 'Mariage') {
+
+        document.getElementById('conjointe').removeAttribute('hidden');
+    }
+
+});
