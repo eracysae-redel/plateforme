@@ -178,13 +178,4 @@ toggleConjoint.addEventListener('change',function (){
     }
 });
 
-const modalPro = document.getElementById('modalProfessionnel');
 
-modalPro.addEventListener('click',function () {
-
-    if (sessionStorage.getItem('mariage') === 'Mariage') {
-
-        document.getElementById('conjointe').removeAttribute('hidden');
-    }
-
-});

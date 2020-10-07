@@ -32,7 +32,7 @@
 
     <div class="row">
       <div class="col">
-        <button type="button" class="mb-3 btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalProfessionnel">Situation Pro</button>
+        <button id="buttonPro" type="button" class="mb-3 btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalProfessionnel">Situation Pro</button>
       </div>
     </div>
 
@@ -181,7 +181,7 @@
     </div>
 
     <div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <form>
+    <form action="mainBT5ALPHA.html" onsubmit="envoiFamille();">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
@@ -346,7 +346,7 @@
             </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-            <button type="submit" class="btn btn-success" id="submitFamille">Sauvegarder</button>
+            <button type="submit" onsubmit="alert()" class="btn btn-success" id="submitFamille">Sauvegarder</button>
           </div>
 
         </div>

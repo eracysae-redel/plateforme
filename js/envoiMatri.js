@@ -1,12 +1,27 @@
 
 
-const mariage = document.getElementById('situationMatri');
-const envoi = document.getElementById('submitFamille');
 
-envoi.addEventListener('submit',function (){
+
+function envoiFamille(){
+
+    let mariage = document.getElementById('situationMatri');
 
     sessionStorage.setItem('mariage',mariage.value);
-    alert(sessionStorage.getItem('mariage'));
+
+    if (sessionStorage.getItem('mariage') === "Mariage") {
+
+        document.getElementById('conjointe').removeAttribute('hidden');
+    }
+}
+
+
+const modalPro = document.getElementById('buttonPro');
+
+modalPro.addEventListener('click',function (){
+
+   if(sessionStorage.getItem('mariage') === "Mariage") {
+       document.getElementById('conjointe').removeAttribute('hidden');
+    }
 
 });
 
