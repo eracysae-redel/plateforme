@@ -38,12 +38,114 @@
 
     <div class="row">
       <div class="col">
-        <button type="button" class="mb-3 btn btn-primary btn-lg btn-block">Situation Patrimoniale</button>
+        <button type="button" class="mb-3 btn btn-primary btn-lg btn-block" data-toggle="modal" data-target="#modalPatrimoine">Situation Patrimoniale</button>
       </div>
     </div>
 
 
 
+
+    <div class="modal fade" id="modalPatrimoine" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="staticBackdropLabel">Situation Professionelle</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+
+
+
+
+<div class="row encart py-3 m-1 mb-5">
+              <div class="row">
+                <div class="col">
+                  <h3 class="text-info text-center">Votre situation</h3>
+                </div>
+              </div>
+
+              <div class="row mb- 5">
+                <div class="col-md">
+                  <label class="form-check-label" for="ak">
+                    ICI INFOICI INFOICI INFOICI INFOICI INFOICI INFOICI INFOICI INFO
+                  </label>
+                </div>
+                <div class="col-md">
+                  <label class="form-check-label" for="zk">
+                    Default radio
+                  </label>
+                </div>
+                <div class="col-md">
+                  <label class="form-check-label" for="ek">
+                    Default radio
+                  </label>
+                </div>
+                <div class="col-md">
+                  <label class="form-check-label" for="rk">
+                    Default radio
+                  </label>
+                </div>
+              </div>
+
+              <div class="row mb-5">
+                <div class="col-md mx-auto">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="ak">
+
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="zk">
+
+                  </div>
+                </div>
+                <div class="col-md">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="ek">
+
+                  </div>
+                </div>
+                <div class="col-md mx-auto">
+                  <div class="form-check mx-auto">
+                    <input class="form-check-input mx-auto" type="radio" name="flexRadioDefault" >
+                    <input class="form-check-input" hidden type="radio" name="radioNoLabel" id="rk" value="" aria-label="...">
+                  </div>
+                </div>
+              </div>
+
+
+
+
+
+
+                <div class="row">
+                  <div class="col-md">
+
+                  </div>
+                  <div class="col-md">
+
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md">
+
+                  </div>
+                </div>
+</div>
+
+
+
+
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-success">Sauvegarder</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
 
 
@@ -88,20 +190,20 @@
                 </div>
               </div>
               <div id="clientEntreprise" hidden>
-              <div class="row">
-                <div class="col-md">
-                  <input type="text" required class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                <div class="row">
+                  <div class="col-md">
+                    <input type="text" required class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                  </div>
+                  <div class="col-md">
+                    <input type="text" required class="form-control mb-3" placeholder="Forme juridique">
+                  </div>
                 </div>
-                <div class="col-md">
-                  <input type="text" required class="form-control mb-3" placeholder="Forme juridique">
+                <div class="row">
+                  <div class="col-md">
+                    <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
+                  </div>
                 </div>
               </div>
-              <div class="row">
-                <div class="col-md">
-                  <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
-                </div>
-              </div>
-            </div>
             </div>
 
 
@@ -137,19 +239,19 @@
                 </div>
               </div>
               <div id="conjointEntreprise" hidden>
-              <div class="row">
-                <div class="col-md">
-                  <input type="text" required class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                <div class="row">
+                  <div class="col-md">
+                    <input type="text" required class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                  </div>
+                  <div class="col-md">
+                    <input type="text" required class="form-control mb-3" placeholder="Forme juridique">
+                  </div>
                 </div>
-                <div class="col-md">
-                  <input type="text" required class="form-control mb-3" placeholder="Forme juridique">
+                <div class="row">
+                  <div class="col-md">
+                    <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
+                  </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="col-md">
-                  <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
-                </div>
-              </div>
 
               </div>
             </div>
@@ -296,34 +398,34 @@
                     </select>
                   </div>
                 </div>
-                </div>
+              </div>
 
-                <h3 class="text-center text-info">Naissance conjoint(e)</h3>
+              <h3 class="text-center text-info">Naissance conjoint(e)</h3>
 
 
-                <div class="row">
-                  <div class="col">
-                    <h6>Date de naissance:</h6>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col">
-                    <input id="birthdayConjoint" type="date" class="form-control mb-3" value="1960-01-01">
-
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-sm">
-                    <h6 class="text-dark">Lieu de naissance:</h6>
-                  </div>
-                </div>
-                <div class="row">
-                  <div class="col-sm">
-                    <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
-                  </div>
+              <div class="row">
+                <div class="col">
+                  <h6>Date de naissance:</h6>
                 </div>
               </div>
+              <div class="row">
+                <div class="col">
+                  <input id="birthdayConjoint" type="date" class="form-control mb-3" value="1960-01-01">
+
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-sm">
+                  <h6 class="text-dark">Lieu de naissance:</h6>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-sm">
+                  <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
+                </div>
+              </div>
+            </div>
 
 
             <div class="row encart m-1 py-3 mb-5">
@@ -342,7 +444,7 @@
 
               </div>
             </div>
-            </div>
+          </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
             <button type="button" class="btn btn-success" disabled="true" id="submit">Sauvegarder</button>
@@ -370,54 +472,54 @@
           <!-- Modal 1.1 : Identité -->
           <div class="modal-body">
             <div class="row encart m-1 py-3 mb-5">
-            <h3 class="text-center text-info">Identité</h3>
-            <form>
-              <div class="row">
-                <div class="col-md">
-                  <input id="name" type="text" required class="form-control mb-3" placeholder="Nom">
+              <h3 class="text-center text-info">Identité</h3>
+              <form>
+                <div class="row">
+                  <div class="col-md">
+                    <input id="name" type="text" required class="form-control mb-3" placeholder="Nom">
+                  </div>
+                  <div class="col-md">
+                    <input id="fName" type="text" required class="form-control mb-3" placeholder="Prenom">
+                  </div>
                 </div>
-                <div class="col-md">
-                  <input id="fName" type="text" required class="form-control mb-3" placeholder="Prenom">
-                </div>
-              </div>
 
-              <div class="row">
-                <div class="col-md">
-                  <select class="form-control mb-3" id="gender">
-                    <option>Civilité</option>
-                    <option value="Mme">Madame</option>
-                    <option value="M">Monsieur</option>
-                  </select>
+                <div class="row">
+                  <div class="col-md">
+                    <select class="form-control mb-3" id="gender">
+                      <option>Civilité</option>
+                      <option value="Mme">Madame</option>
+                      <option value="M">Monsieur</option>
+                    </select>
+                  </div>
+                  <div class="col-sm">
+                    <input type="text" required class="form-control mb-3" id="bName" placeholder="Nom de Naissance">
+                  </div>
                 </div>
-                <div class="col-sm">
-                  <input type="text" required class="form-control mb-3" id="bName" placeholder="Nom de Naissance">
-                </div>
-              </div>
 
-              <!-- type client?
+                <!-- type client?
             id="refClient" -->
 
-              <div class="row">
-                <div class="col">
-                  <h6>Capacité juridique:</h6>
+                <div class="row">
+                  <div class="col">
+                    <h6>Capacité juridique:</h6>
+                  </div>
                 </div>
-              </div>
 
-              <div class="row">
-                <div class="col">
-                  <select class="form-select mb-3" id="legalCapacity">
-                    <option value="" selected disabled>Non renseigné</option>
-                    <option>Majeur Capable</option>
-                    <option>Tutelle</option>
-                    <option>Curatelle</option>
-                  </select>
+                <div class="row">
+                  <div class="col">
+                    <select class="form-select mb-3" id="legalCapacity">
+                      <option value="" selected disabled>Non renseigné</option>
+                      <option>Majeur Capable</option>
+                      <option>Tutelle</option>
+                      <option>Curatelle</option>
+                    </select>
+                  </div>
                 </div>
-              </div>
-              </div>
+            </div>
 
 
 
-              <div class="row encart m-1 py-3 mb-5">
+            <div class="row encart m-1 py-3 mb-5">
               <!-- Modal 1.2 : Naissance -->
               <h3 class="text-center text-info">Naissance</h3>
 
@@ -445,12 +547,12 @@
                   <input type="text" required class="form-control mb-3" id="bName" placeholder="Ville">
                 </div>
               </div>
-              </div>
+            </div>
 
 
 
 
-<div class="row encart m-1 py-3 mb-5">
+            <div class="row encart m-1 py-3 mb-5">
               <!-- Modal 1.3 : Coordonnées -->
               <h3 class="text-center text-info">Coordonnées</h3>
 
@@ -1015,7 +1117,7 @@
                   </select>
                 </div>
               </div>
-              </div>
+            </div>
 
 
 
@@ -1026,12 +1128,12 @@
 
 
 
-              <!-- Modal 1.4 : Situation Matrimoniale -->
+            <!-- Modal 1.4 : Situation Matrimoniale -->
 
 
 
 
-              <!-- IDENTITE CONJOINT -->
+            <!-- IDENTITE CONJOINT -->
 
 
 
