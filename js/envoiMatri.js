@@ -4,20 +4,15 @@
 
 function envoiFamille(){
 
-    let mariage = document.getElementById('situationMatri');
+    let mariage = document.getElementById('situationMatri').value;
+    sessionStorage.setItem('mariage',mariage);
 
-    sessionStorage.setItem('mariage',mariage.value);
-
-    if (sessionStorage.getItem('mariage') === "Mariage") {
-
-        document.getElementById('conjointe').removeAttribute('hidden');
-    }
 }
 
 
 const modalPro = document.getElementById('buttonPro');
 
-modalPro.addEventListener('click',function (){
+modalPro.addEventListener('click',function (e){
 
    if(sessionStorage.getItem('mariage') === "Mariage") {
        document.getElementById('conjointe').removeAttribute('hidden');

@@ -1,8 +1,6 @@
 
 const situation = document.getElementById("situationMatri");
 
-
-
 situation.addEventListener("change",function (e){
 
     const mariage = document.getElementById('mariage');
@@ -142,8 +140,6 @@ function addChildren(){
     target.appendChild(div);
 
 }
-
-
 
 
 const buttonEnfant = document.getElementById('addEnfant');
