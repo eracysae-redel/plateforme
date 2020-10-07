@@ -44,12 +44,12 @@
 
 
 
-<form class="" action="index.html" method="post">
+<form method="post">
     <div class="modal fade" id="modalPatrimoine" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="staticBackdropLabel">Situation Professionelle</h5>
+            <h5 class="modal-title" id="staticBackdropLabel">Situation Patrimoniale</h5>
             <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
@@ -148,7 +148,7 @@
     </div>
 </form>
 
-    <form class="" action="index.html" method="post">
+    <form class="" method="post">
     <div class="modal fade" id="modalProfessionnel" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
@@ -177,7 +177,7 @@
                 </div>
                 <div class="col-md">
                   <label for="">Métier : </label>
-                  <input type="text" required class="form-control mb-3" placeholder="ex : menuisier">
+                  <input type="text"  class="form-control mb-3" placeholder="ex : menuisier">
                 </div>
               </div>
               <div class="row">
@@ -191,22 +191,22 @@
               <div id="clientEntreprise" hidden>
                 <div class="row">
                   <div class="col-md">
-                    <input type="text" required class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                    <input type="text"  class="form-control mb-3" placeholder="Dénomination de l'entreprise">
                   </div>
                   <div class="col-md">
-                    <input type="text" required class="form-control mb-3" placeholder="Forme juridique">
+                    <input type="text"  class="form-control mb-3" placeholder="Forme juridique">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md">
-                    <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
+                    <input type="text"  class="form-control mb-3" placeholder="Adresse du siège social">
                   </div>
                 </div>
               </div>
             </div>
 
 
-            <div class="row encart m-1 py-3 mb-5" id="conjointe">
+            <div hidden class="row encart m-1 py-3 mb-5" id="conjointe">
               <div class="row">
                 <div class="col">
                   <h3 class="text-info text-center">Situation conjoint(e)</h3>
@@ -226,7 +226,7 @@
                 </div>
                 <div class="col-md">
                   <label for="">Métier : </label>
-                  <input type="text" required class="form-control mb-3" placeholder="ex : menuisier">
+                  <input type="text"  class="form-control mb-3" placeholder="ex : menuisier">
                 </div>
               </div>
               <div class="row">
@@ -240,15 +240,16 @@
               <div id="conjointEntreprise" hidden>
                 <div class="row">
                   <div class="col-md">
-                    <input type="text" required class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                    <input type="text"
+                   class="form-control mb-3" placeholder="Dénomination de l'entreprise">
                   </div>
                   <div class="col-md">
-                    <input type="text" required class="form-control mb-3" placeholder="Forme juridique">
+                    <input type="text" class="form-control mb-3" placeholder="Forme juridique">
                   </div>
                 </div>
                 <div class="row">
                   <div class="col-md">
-                    <input type="text" required class="form-control mb-3" placeholder="Adresse du siège social">
+                    <input type="text"  class="form-control mb-3" placeholder="Adresse du siège social">
                   </div>
                 </div>
 
@@ -284,7 +285,7 @@
 
 
 
-<form class="" action="index.html" method="post">
+<form action="mainBT5ALPHA.html" onsubmit="envoifamille();">
     <div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
@@ -364,10 +365,10 @@
                 <h3 class="text-center text-info mt-3">Indentité Conjoint(e)</h3>
                 <div class="row">
                   <div class="col-sm">
-                    <input id="nameConjoint" type="text" required class="form-control mb-3" placeholder="Nom">
+                    <input id="nameConjoint" type="text"  class="form-control mb-3" placeholder="Nom">
                   </div>
                   <div class="col-sm">
-                    <input id="fNameConjoint" type="text" required class="form-control mb-3" placeholder="Prenom">
+                    <input id="fNameConjoint" type="text"  class="form-control mb-3" placeholder="Prenom">
                   </div>
                 </div>
 
@@ -380,7 +381,7 @@
                     </select>
                   </div>
                   <div class="col-sm">
-                    <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Nom de Naissance">
+                    <input type="text"  class="form-control mb-3" id="bNameConjoint" placeholder="Nom de Naissance">
                   </div>
                 </div>
 
@@ -425,7 +426,7 @@
               </div>
               <div class="row">
                 <div class="col-sm">
-                  <input type="text" required class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
+                  <input type="text"  class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
                 </div>
               </div>
             </div>
@@ -447,7 +448,7 @@
               </div>
               </div>
             </div>
-          
+
 
 
 
@@ -455,7 +456,7 @@
 
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-            <button type="submit" class="btn btn-success" id="submit">Sauvegarder</button>
+            <button type="submit" class="btn btn-success" id="famille">Sauvegarder</button>
           </div>
 
         </div>
@@ -468,7 +469,7 @@
 
 
     <!-- Modal 1 : Situation Personnelle 1/2 -->
-<form class="" action="index.html" method="post">
+<form  method="post">
     <div class="modal fade" id="modalEtatCivil" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
       <div class="modal-dialog modal-lg modal-dialog-scrollable">
         <div class="modal-content">
@@ -485,10 +486,10 @@
               <form>
                 <div class="row">
                   <div class="col-md">
-                    <input id="name" type="text" required class="form-control mb-3" placeholder="Nom">
+                    <input id="name" type="text" class="form-control mb-3" placeholder="Nom">
                   </div>
                   <div class="col-md">
-                    <input id="fName" type="text" required class="form-control mb-3" placeholder="Prenom">
+                    <input id="fName" type="text" class="form-control mb-3" placeholder="Prenom">
                   </div>
                 </div>
 
@@ -501,7 +502,7 @@
                     </select>
                   </div>
                   <div class="col-sm">
-                    <input type="text" required class="form-control mb-3" id="bName" placeholder="Nom de Naissance">
+                    <input type="text"  class="form-control mb-3" id="bName" placeholder="Nom de Naissance">
                   </div>
                 </div>
 
@@ -553,7 +554,7 @@
               </div>
               <div class="row">
                 <div class="col-sm">
-                  <input type="text" required class="form-control mb-3" id="bName" placeholder="Ville">
+                  <input type="text" class="form-control mb-3" id="bName" placeholder="Ville">
                 </div>
               </div>
             </div>
