@@ -143,10 +143,37 @@ function addChildren(){
 
 }
 
+
+
+
 const buttonEnfant = document.getElementById('addEnfant');
 
 buttonEnfant.addEventListener('click',function (){
 
     addChildren();
 
+});
+
+
+const toggleDirigeant = document.getElementById('dirigeant');
+
+toggleDirigeant.addEventListener('change',function (){
+
+    if (toggleDirigeant.checked) {
+        document.getElementById('clientEntreprise').removeAttribute('hidden');
+    } else {
+        document.getElementById('clientEntreprise').setAttribute('hidden','true');
+    }
+
+});
+
+const toggleConjoint = document.getElementById('conjointDirigeant');
+
+toggleConjoint.addEventListener('change',function (){
+
+    if (toggleConjoint.checked) {
+        document.getElementById('conjointEntreprise').removeAttribute('hidden');
+    } else {
+        document.getElementById('conjointEntreprise').setAttribute('hidden',true);
+    }
 });
