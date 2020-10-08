@@ -8,6 +8,13 @@ body {
   background: linear-gradient(90deg, rgba(251,255,172,1) 0%, rgba(211,238,255,1) 100%);
 } */
 
+
+.cbtn{
+  min-height: 1rem;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
 .encart {
   background-color:  white!important;
   border-radius:10px;
