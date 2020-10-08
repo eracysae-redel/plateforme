@@ -1,7 +1,4 @@
 
-
-
-
 function envoiFamille(){
 
     let mariage = document.getElementById('situationMatri').value;
