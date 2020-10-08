@@ -6,8 +6,10 @@ function selectButton () {
            for (let j = 0; j<buttons.length; j++) {
                if(i == j){
                    buttons[j].setAttribute('id','testButton');
+                   buttons[j].setAttribute('class','choisi');
                } else {
                    buttons[j].removeAttribute('id');
+                   buttons[j].setAttribute('class','btn btn-outline-primary');
                }
            }
         });
