@@ -16,16 +16,3 @@ function selectButton () {
     }
 }
 
-function hendeck(e) {
-
-    alert(e);
-}
-
-const submitB = document.getElementById('save');
-
-submitB.addEventListener('click',function (){
-
-
-    hendeck(document.getElementById('testButton').value);
-
-})
