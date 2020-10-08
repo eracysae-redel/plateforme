@@ -1,10 +1,9 @@
-const buttons = document.querySelectorAll('#selectButton button');
-
 function selectButton () {
+    const buttons = document.querySelectorAll('#selectButton button');
     for (let i = 0; i<buttons.length; i++) {
         buttons[i].addEventListener('click',function (){
            for (let j = 0; j<buttons.length; j++) {
-               if(i == j){
+               if(i === j){
                    buttons[j].setAttribute('id','testButton');
                    buttons[j].setAttribute('class','choisi btn btn-outline-primary');
                } else {
