@@ -53,7 +53,7 @@
             <div class="modal-body">
 
               <!-- Revenus annuels du foyer fiscal -->
-              <div id="selectButton" class="row encart py-3 m-1 mb-5">
+              <div id="selectButton" class="row encart py-3 m-1 mb-5 pl-3">
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center mb-3">Revenus annuels du foyer fiscal</h3>
@@ -78,7 +78,7 @@
               </div>
 
               <!-- Estimation globale de votre patrimoine -->
-              <div id="" class="row encart py-3 m-1 mb-5">
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center mb-3">Estimation globale de votre patrimoine, dettes exclues</h3>
@@ -101,14 +101,14 @@
                   </div>
                 </div>
                 <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:70%;">plus de 5M</button>
+                  <div class=".col-sm-6 .offset-sm-3">
+                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:35%;">plus de 5M</button>
                   </div>
                 </div>
               </div>
 
               <!-- Dettes -->
-              <div id="" class="row encart py-3 m-1 mb-5">
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center mb-3">Dettes</h3>
@@ -132,13 +132,13 @@
                 </div>
                 <div class="row text-center">
                   <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:70%;">plus de 5M</button>
+                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:35%;">plus de 5M</button>
                   </div>
                 </div>
               </div>
 
               <!-- Repartition de votre patrimoine -->
-              <div id="" class="row encart py-3 m-1 mb-5">
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center mb-3">Repartition de votre patrimoine</h3>
@@ -147,7 +147,7 @@
                 <div class="row text-center">
                   <div class="col-sm mb-3">
                     <div class="input-group">
-                      <input type="text" class="form-control form-control-sm" placeholder="Actifs finanicers" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <input type="text" class="form-control form-control" placeholder="Actifs finanicers" aria-label="Recipient's username" aria-describedby="basic-addon2">
                       <div class="input-group-append">
                         <span class="input-group-text" id="basic-addon2">%</span>
                       </div>
@@ -183,16 +183,24 @@
               </div>
 
               <!-- Etes-vous redevable de l'IFI ? -->
-              <div id="" class="row encart py-3 m-1 mb-5">
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center mb-3">Etes-vous redevable de l'IFI ?</h3>
                   </div>
                 </div>
+                <div class="row text-center">
+                  <div class="col-xs mb-3">
+                    <button onclick="selectButton()" value="Oui" type="button" class="btn btn-outline-primary" style="width:70%;">Oui</button>
+                  </div>
+                  <div class="col-xs mb-3">
+                    <button onclick="selectButton()" value="Non" type="button" class="btn btn-outline-primary" style="width:70%;">Non</button>
+                  </div>
+                </div>
               </div>
 
               <!--  Charges et engagements financiers (par mois) -->
-              <div id="" class="row encart py-3 m-1 mb-5">
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center mb-3">Charges et engagements financiers (par mois)</h3>
@@ -200,21 +208,29 @@
                 </div>
                 <div class="row text-center">
                   <div class="col-sm mb-3">
-                    <input type="text" class="form-control mb-3" placeholder="montant mensuel">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Montant Mensuel" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">€</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
 
               <!-- Capacité d'éparne estimée (par mois) -->
-              <div id="" class="row encart py-3 m-1 mb-5">
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center mb-3">Capacité d'épargne estimée (par mois)</h3>
                   </div>
                 </div>
                 <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <input type="text" class="form-control mb-3" placeholder="montant mensuel">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Montant Mensuel" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2">€</span>
+                    </div>
                   </div>
                 </div>
 
