@@ -42,8 +42,8 @@
       </div>
     </div>
 
-    <div class="modal fade" id="modalPatrimoine" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <form>
+    <form id="formPatrimoine">
+      <div class="modal fade" id="modalPatrimoine" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -240,15 +240,15 @@
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-              <button type="button" class="btn btn-success">Sauvegarder</button>
+              <button type="submit" class="btn btn-success">Sauvegarder</button>
             </div>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
 
-    <div class="modal fade" id="modalProfessionnel" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <form>
+    <form id="formProfessionnel">
+      <div class="modal fade" id="modalProfessionnel" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -386,15 +386,15 @@
 
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-              <button type="button" class="btn btn-success">Sauvegarder</button>
+              <button type="submit" class="btn btn-success">Sauvegarder</button>
             </div>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
 
-    <div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <form id="formSituationFamilliale">
+    <form id="formSituationFamilliale">
+      <div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -551,11 +551,11 @@
             </div>
           </div>
         </div>
-      </form>
-    </div>
+      </div>
+    </form>
 
-    <div class="modal fade" id="modalEtatCivil" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-      <form id="formCivil">
+    <form id="formEtatCivil">
+      <div class="modal fade" id="modalEtatCivil" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
           <div class="modal-content">
             <div class="modal-header">
@@ -569,7 +569,7 @@
                 <div>
                   <div class="row">
                     <div class="col-md">
-                      <input id="nom" type="text" class="form-control mb-3" placeholder="Nom">
+                      <input required id="nom" type="text" class="form-control mb-3" placeholder="Nom">
                     </div>
                     <div class="col-md">
                       <input id="prenom" type="text" class="form-control mb-3" placeholder="Prenom">
@@ -1214,24 +1214,24 @@
             <div class="modal-footer">
 
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-              <button type="button" class="btn btn-success" id="submit">Sauvegarder</button>
+              <button type="submit" class="btn btn-success">Sauvegarder</button>
               <p id="erreur"></p>
             </div>
           </div>
         </div>
-      </form>
-  </div>
+      </div>
+    </form>
 
 
 
 
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
-  <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
-  <script src="js/init.js" type="text/javascript"></script>
-  <script src="js/envoiFs.js" type="text/javascript"></script>
-  <script src="js/envoiMatri.js" type="text/javascript"></script>
-  <script src="js/envoiPatri.js" type="text/javascript"></script>
-  <script src="js/formView.js" type="text/javascript"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/js/bootstrap.bundle.min.js" integrity="sha384-BOsAfwzjNJHrJ8cZidOg56tcQWfp6y72vEJ8xQ9w6Quywb24iOsW913URv1IS4GD" crossorigin="anonymous"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.0/firebase.js"></script>
+    <script src="js/init.js" type="text/javascript"></script>
+    <script src="js/envoiFs.js" type="text/javascript"></script>
+    <script src="js/envoiMatri.js" type="text/javascript"></script>
+    <script src="js/envoiPatri.js" type="text/javascript"></script>
+    <script src="js/formView.js" type="text/javascript"></script>
 
 
 
