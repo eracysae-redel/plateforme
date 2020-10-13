@@ -1,6 +1,4 @@
-
-
-
+const db = firebase.database();
 
 
 // La fonction getUserId vient récupérer la première lettre du prénom et le nom pour créer un seul ID.
@@ -24,47 +22,38 @@ function writeUserData() {
 
     const userId = getUserId();
 
-    var db = firebase.database();
+    db.ref('users/').child(userId).set(null);
+    db.ref('users/' + userId).child('Etat Civil').set(null);
+    db.ref('users/' + userId + '/Etat Civil').child('Identité').set(null);
 
-    db.ref().child('users/').orderByChild("id").equalTo(userId).once("value", snapshot => {
-        if (snapshot.exists()) {
+    const identite = db.ref("users/" + userId + "/Etat Civil/Identité");
 
-            alert('Utilisateur déjà existant !');
-            return 0;
+    db.ref(identite).set({
+        "Nom": document.getElementById('nom').value,
+        "Prénom": document.getElementById('prenom').value,
+        "Civilité": document.getElementById('civilite').value,
+        "Nom de Naissance": document.getElementById('nomNaissance').value,
+        "Capacité Juridique": document.getElementById('capaciteJuridique').value
+    });
 
-        } else {
-            db.ref('users/').child(userId).set(null);
-            db.ref('users/' + userId).child("id").set(userId);
-            db.ref('users/' + userId).child('Identite').set(null);
-            const identite = db.ref("users/" + userId + "Identite");
+    db.ref('users/' + userId + '/Etat Civil').child('Naissance').set(null);
+    const naissance = db.ref("users/" + userId + "/Etat Civil/Naissance");
+    db.ref(naissance).set({
+        "Date de Naissance": document.getElementById('dateNaissance').value,
+        "Lieu de Naissance": document.getElementById('lieuNaissance').value,
+    });
 
-            db.ref(identite).set({
-                "nom": document.getElementById('nom').value,
-                "prenom": document.getElementById('prenom').value,
-                "civilite": document.getElementById('civilite').value,
-                "nomDeNaissance": document.getElementById('nomNaissance').value,
-                "capaciteJuridique": document.getElementById('capaciteJuridique').value
-            });
-
-            db.ref('users/' + userId).child('Naissance').set(null);
-            const naissance = db.ref("users/" + userId + "Naissance");
-            db.ref(naissance).set({
-                "dateNaissance": document.getElementById('dateNaissance').value,
-                "lieuNaissance": document.getElementById('lieuNaissance').value,
-            });
-            db.ref('users/' + userId).child('Coordonnees').set(null);
-            const coordonnees = db.ref("users/" + userId + "Coordonnees");
-            db.ref(coordonnees).set({
-                "adresse": document.getElementById('adresse').value,
-                "codePostal": document.getElementById('adresseCP').value,
-                "ville": document.getElementById('adresseVille').value,
-                "pays": document.getElementById('adressePays').value,
-                "telFixe": document.getElementById('telFixe').value,
-                "telMobile": document.getElementById('telPortable').value,
-                "mail": document.getElementById('courriel').value,
-                "residenceFiscale": document.getElementById('residenceFiscale').value
-            });
-        }
+    db.ref('users/' + userId + '/Etat Civil').child('Coordonnées').set(null);
+    const coordonnees = db.ref("users/" + userId + "/Etat Civil/Coordonnées");
+    db.ref(coordonnees).set({
+        "Adresse": document.getElementById('adresse').value,
+        "Code Postal": document.getElementById('adresseCP').value,
+        "Ville": document.getElementById('adresseVille').value,
+        "Pays": document.getElementById('adressePays').value,
+        "Téléphone Fixe": document.getElementById('telFixe').value,
+        "Téléphone Mobile": document.getElementById('telPortable').value,
+        "Courriel": document.getElementById('courriel').value,
+        "Résidence Fiscale": document.getElementById('residenceFiscale').value
     });
 }
 
