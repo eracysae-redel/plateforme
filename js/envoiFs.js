@@ -6,10 +6,10 @@
 // La fonction getUserId vient récupérer la première lettre du prénom et le nom pour créer un seul ID.
 function getUserId() {
 
-  if(document.getElementById('fName').value && document.getElementById('name').value ) {
+  if(document.getElementById('nom').value && document.getElementById('prenom').value ) {
 
-    const firstLetter = document.getElementById('fName').value.substring(0, 1).toUpperCase();
-    const name = document.getElementById('name').value.toUpperCase();
+    const firstLetter = document.getElementById('nom').value.substring(0, 1).toUpperCase();
+    const name = document.getElementById('prenom').value.toUpperCase();
     const userId = firstLetter + name;
 
     return userId;
