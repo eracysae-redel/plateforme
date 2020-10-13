@@ -1,6 +1,7 @@
 function writeUserDataFamille() {
 
     const userId = sessionStorage.getItem('userId');
+    alert(userId);
 
     db.ref('users/' + userId).child('Situation Familliale').set(null);
     db.ref('users/' + userId + '/Etat Civil').child('Situation Matrimoniale').set(null);
