@@ -64,7 +64,6 @@ function writeUserData() {
                 "mail": document.getElementById('courriel').value,
                 "residenceFiscale": document.getElementById('residenceFiscale').value
             });
-
         }
     });
 }
