@@ -26,7 +26,7 @@ function writeUserData() {
 
     var db = firebase.database();
 
-    db.ref().child('users/').orderByChild("id").equalTo(userId + refClient).once("value", snapshot => {
+    db.ref().child('users/').orderByChild("id").equalTo(userId).once("value", snapshot => {
         if (snapshot.exists()) {
 
             alert('Utilisateur déjà existant !');
