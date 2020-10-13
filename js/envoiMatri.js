@@ -1,24 +1,5 @@
 const db = firebase.database();
 
-
-function envoiFamille(){
-
-    let mariage = document.getElementById('situationMatrimoniale').value;
-    sessionStorage.setItem('mariage',mariage);
-
-}
-
-
-const modalPro = document.getElementById('buttonPro');
-
-modalPro.addEventListener('click',function (e){
-
-   if(sessionStorage.getItem('mariage') === "Mariage") {
-       document.getElementById('conjointe').removeAttribute('hidden');
-    }
-
-});
-
 function writeUserData() {
 
     const userId = sessionStorage.getItem('userId');
@@ -70,7 +51,19 @@ const submit = document.getElementById('submitFamille');
 
 submit.addEventListener('click', function () {
 
+    let mariage = document.getElementById('situationMatrimoniale').value;
+    sessionStorage.setItem('mariage',mariage);
     writeUserData();
+
+});
+
+const modalPro = document.getElementById('buttonPro');
+
+modalPro.addEventListener('click',function (e){
+
+    if(sessionStorage.getItem('mariage') === "Mariage") {
+        document.getElementById('conjointe').removeAttribute('hidden');
+    }
 
 });
 
