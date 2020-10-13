@@ -1,4 +1,8 @@
 
+
+
+
+
 // La fonction getUserId vient récupérer la première lettre du prénom et le nom pour créer un seul ID.
 function getUserId() {
 
@@ -11,12 +15,37 @@ function getUserId() {
     return userId;
 
   } else {
-
       return 0;
-
   }
 
 }
+
+var form = document.getElementById('formCivil').addEventListener('submit', (e) => {
+
+    let erreur;
+    const inputs = this.getElementsByTagName('inputs');
+    const selects = this.getElementsByTagName('select');
+    for (let i = 0; i < inputs.length; i++) {
+        if (!inputs[i].value) {
+            erreur = "Veuillez renseigner tous les champs !";
+        }
+    }
+
+    for (let i = 0; i < selects.length; i++) {
+        if (!selects[i].value) {
+            erreur = "Veuillez renseigner tous les champs !";
+        }
+    }
+
+    if (erreur) {
+        e.preventDefault();
+        document.getElementById('erreur').innerHTML = erreur;
+        return false;
+    } else {
+        alert('Formulaire envoyé !');
+    }
+});
+
 
 // La fonction writeUserData() vérifie l'existence ou pas d'un id, si ce dernier n'existes pas les informations sont envoyées à la BDD.
 // Un id unique est créer en combinant le getUserID() + la ref. client.
