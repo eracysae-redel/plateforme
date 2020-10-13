@@ -726,7 +726,7 @@
 
                 <div class="row">
                   <div class="col">
-                    <select required class="form-control mb-3" id="situationMatri">
+                    <select required class="form-control mb-3" id="situationMatrimoniale">
                       <option value="" selected disabled>Non renseigné</option>
                       <option value="Mariage">Marié(é)</option>
                       <option value="Pacs">Pacsé(é)</option>
@@ -742,13 +742,13 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="exampleInputPassword1">Depuis?</label>
-                      <input type="date" class="form-control" id="exampleInputPassword1">
+                      <input id="depuisMariage" type="date" class="form-control">
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label for="exampleInputPassword1">Contrat?</label>
-                      <input type="text" placeholder="Si oui, précisez" class="form-control" id="exampleInputPassword1">
+                      <input id="ContratMariage" type="text" placeholder="Si oui, précisez" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -757,13 +757,13 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="exampleInputPassword1">Depuis?</label>
-                      <input type="date" class="form-control" id="exampleInputPassword1">
+                      <input  id="depuisPacs" type="date" class="form-control">
                     </div>
                   </div>
                   <div class="col">
                     <div class="form-group">
                       <label for="exampleInputPassword1">Convention?</label>
-                      <input type="text" placeholder="précisez laquelle" class="form-control" id="exampleInputPassword1">
+                      <input id="conventionPacs" type="text" placeholder="précisez laquelle" class="form-control" id="exampleInputPassword1">
                     </div>
                   </div>
                 </div>
@@ -772,7 +772,7 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="exampleInputPassword1">Depuis?</label>
-                      <input type="date" class="form-control" id="exampleInputPassword1">
+                      <input id="depuisDivorce" type="date" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -782,23 +782,23 @@
 
                   <div class="row">
                     <div class="col-sm">
-                      <input id="nameConjoint" type="text" class="form-control mb-3" placeholder="Nom">
+                      <input id="nomConjoint" type="text" class="form-control mb-3" placeholder="Nom">
                     </div>
                     <div class="col-sm">
-                      <input id="fNameConjoint" type="text" class="form-control mb-3" placeholder="Prenom">
+                      <input id="prenomConjoint" type="text" class="form-control mb-3" placeholder="Prenom">
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-sm">
-                      <select class="form-control mb-3" id="genderConjoint">
+                      <select  id="civiliteConjoint" class="form-control mb-3">
                         <option>Civilité</option>
                         <option value="Mme">Madame</option>
                         <option value="M">Monsieur</option>
                       </select>
                     </div>
                     <div class="col-sm">
-                      <input type="text" class="form-control mb-3" id="bNameConjoint" placeholder="Nom de Naissance">
+                      <input id="nomNaissanceConjoint" type="text" class="form-control mb-3" placeholder="Nom de Naissance">
                     </div>
                   </div>
 
@@ -810,7 +810,7 @@
 
                   <div class="row">
                     <div class="col">
-                      <select class="form-control mb-3" id="legalCapacityConjoint">
+                      <select id="capaciteJuridiqueConjoint" class="form-control mb-3">
                         <option value="" selected disabled>Non renseigné</option>
                         <option>Majeur Capable</option>
                         <option>Tutelle</option>
@@ -829,7 +829,7 @@
 
                   <div class="row">
                     <div class="col">
-                      <input id="birthdayConjoint" type="date" class="form-control mb-3" value="1960-01-01">
+                      <input id="dateNaissanceConjoint" type="date" class="form-control mb-3" value="1960-01-01">
                     </div>
                   </div>
 
@@ -841,7 +841,7 @@
 
                   <div class="row">
                     <div class="col-sm">
-                      <input type="text" class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
+                      <input  id="lieuNaissanceConjoint" type="text" class="form-control mb-3" placeholder="Ville">
                     </div>
                   </div>
                 </div>
