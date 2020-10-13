@@ -14,6 +14,15 @@ situation.addEventListener("change",function (e){
             infoConjoint.removeAttribute("hidden");
             pacs.setAttribute("hidden",true);
             divorce.setAttribute('hidden',true);
+            document.getElementById('depuisMariage').setAttribute('required','true');
+            document.getElementById('depuisDivorce').removeAttribute('required');
+            document.getElementById('depuisPacs').removeAttribute('required');
+            document.getElementById('contratMariage').setAttribute('required','true');
+            document.getElementById('conventionPacs').removeAttribute('required');
+            document.getElementById('nomConjoint').setAttribute('required','true');
+            document.getElementById('prenomConjoint').setAttribute('required','true');
+            document.getElementById('civiliteConjoint').setAttribute('required','true');
+            document.getElementById('nomNaissanceConjoint').setAttribute('required','true');
             break;
 
         case "Pacs" :
@@ -21,6 +30,15 @@ situation.addEventListener("change",function (e){
             infoConjoint.removeAttribute("hidden");
             mariage.setAttribute("hidden",true);
             divorce.setAttribute('hidden',true);
+            document.getElementById('depuisPacs').setAttribute('required','true');
+            document.getElementById('depuisMariage').removeAttribute('required');
+            document.getElementById('depuisDivorce').removeAttribute('required');
+            document.getElementById('conventionPacs').setAttribute('required','true');
+            document.getElementById('contratMariage').removeAttribute('required');
+            document.getElementById('nomConjoint').setAttribute('required','true');
+            document.getElementById('prenomConjoint').setAttribute('required','true');
+            document.getElementById('civiliteConjoint').setAttribute('required','true');
+            document.getElementById('nomNaissanceConjoint').setAttribute('required','true');
             break;
 
         case "Divorcé" :
@@ -28,6 +46,15 @@ situation.addEventListener("change",function (e){
             pacs.setAttribute("hidden",true);
             mariage.setAttribute('hidden',true);
             infoConjoint.setAttribute("hidden",true);
+            document.getElementById('depuisDivorce').setAttribute('required','true');
+            document.getElementById('depuisMariage').removeAttribute('required');
+            document.getElementById('depuisPacs').removeAttribute('required');
+            document.getElementById('conventionPacs').removeAttribute('required');
+            document.getElementById('contratMariage').removeAttribute('required');
+            document.getElementById('nomConjoint').removeAttribute('required');
+            document.getElementById('prenomConjoint').removeAttribute('required');
+            document.getElementById('civiliteConjoint').removeAttribute('required');
+            document.getElementById('nomNaissanceConjoint').removeAttribute('required');
             break;
 
         default :
