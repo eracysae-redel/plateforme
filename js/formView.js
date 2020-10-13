@@ -85,7 +85,6 @@ function addChildren(){
     const div = document.createElement('div');
     div.setAttribute('id','marmot'+counter);
     div.setAttribute('class','card');
-
     let content = '<div class="card-header">\n' +
         '    <div class="row">\n' +
         '        <div class="col-10">\n' +
