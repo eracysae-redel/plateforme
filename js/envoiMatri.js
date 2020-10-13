@@ -1,12 +1,12 @@
 function writeUserDataFamille() {
 
-    const userId = sessionStorage.getItem('userId');
-    alert(userId);
+    const getUser = sessionStorage.getItem('userId');
+    alert(getUser);
 
-    db.ref('users/' + userId).child('Situation Familliale').set(null);
-    db.ref('users/' + userId + '/Etat Civil').child('Situation Matrimoniale').set(null);
+    db.ref('users/' + getUser).child('Situation Familliale').set(null);
+    db.ref('users/' + getUser + '/Situation Familliale').child('Situation Matrimoniale').set(null);
 
-    const situationMatri = db.ref("users/" + userId + "/Situation Familliale/Situation Matrimoniale");
+    const situationMatri = db.ref("users/" + getUser + "/Situation Familliale/Situation Matrimoniale");
 
     if (document.getElementById('situationMatrimoniale').value === "Mariage") {
         db.ref(situationMatri).set({
