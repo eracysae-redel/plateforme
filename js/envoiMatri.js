@@ -45,9 +45,9 @@ function writeUserDataFamille() {
     }
 }
 
-const submit = document.getElementById('submitFamille');
+const submitFamille = document.getElementById('submitFamille');
 
-submit.addEventListener('click', function () {
+submitFamille.addEventListener('click', function () {
 
     let mariage = document.getElementById('situationMatrimoniale').value;
     sessionStorage.setItem('mariage',mariage);
