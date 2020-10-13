@@ -61,6 +61,8 @@ const submit = document.getElementById('submitCivil');
 
 submit.addEventListener('click',function () {
 
+    const userId = getUserId();
+    sessionStorage.setItem('userId',userId);
     writeUserData();
 
 });
