@@ -59,26 +59,26 @@
                     <div class="col-md">
                       <input required id="nom" type="text" class="form-control mb-3" placeholder="Nom">
                     </div>
+                    <div class="valid-feedback">
+                        Looks good!
+                    </div>
                     <div class="col-md">
-                      <input id="prenom" type="text" class="form-control mb-3" placeholder="Prenom">
+                      <input required id="prenom" type="text" class="form-control mb-3" placeholder="Prenom">
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-md">
-                      <select class="form-select mb-3" id="civilite">
-                        <option>Civilité</option>
+                      <select required id="civilite" class="form-select mb-3">
+                        <option value="" selected disabled>Civilité</option>
                         <option value="Mme">Madame</option>
                         <option value="M">Monsieur</option>
                       </select>
                     </div>
                     <div class="col-sm">
-                      <input type="text" class="form-control mb-3" id="nomNaissance" placeholder="Nom de Naissance">
+                      <input required id="nomNaissance" type="text" class="form-control mb-3"placeholder="Nom de Naissance">
                     </div>
                   </div>
-
-                  <!-- type client?
-              id="refClient" -->
 
                   <div class="row">
                     <div class="col">
@@ -88,7 +88,7 @@
 
                   <div class="row">
                     <div class="col">
-                      <select class="form-select mb-3" id="capaciteJuridique">
+                      <select required id="capaciteJuridique" class="form-select mb-3">
                         <option value="" selected disabled>Non renseigné</option>
                         <option>Majeur Capable</option>
                         <option>Tutelle</option>
@@ -113,7 +113,7 @@
 
                 <div class="row">
                   <div class="col">
-                    <input id="dateNaissance" type="date" class="form-control mb-3" value="1960-01-01">
+                    <input required id="dateNaissance" type="date" class="form-control mb-3" value="1960-01-01">
                   </div>
                 </div>
 
@@ -125,7 +125,7 @@
 
                 <div class="row">
                   <div class="col-sm">
-                    <input type="text" class="form-control mb-3" id="lieuNaissance" placeholder="Ville">
+                    <input required id="lieuNaissance" type="text" class="form-control mb-3" placeholder="Ville">
                   </div>
                 </div>
               </div>
@@ -137,19 +137,19 @@
                 <!-- Adresse CLASSIC-->
                 <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control mb-3" placeholder="Adresse" id="adresse">
+                    <input required id="adresse" type="text" class="form-control mb-3" placeholder="Adresse">
                   </div>
                 </div>
                 <!-- Code Postal CLASSIC-->
                 <div class="row">
                   <div class="col-md">
-                    <input class="form-control mb-3" placeholder="Code postal" id="adresseCP">
+                    <input required  id="adresseCP" class="form-control mb-3" placeholder="Code postal">
                   </div>
 
                   <!-- Ville CLASSIC-->
 
                   <div class="col-md">
-                    <input type="text" class="form-control mb-3" placeholder="Ville" id="adresseVille">
+                    <input required  id="adresseVille" type="text" class="form-control mb-3" placeholder="Ville">
                   </div>
                 </div>
                 <!-- Pays LISTE-->
@@ -161,7 +161,7 @@
 
                 <div class="row">
                   <div class="col">
-                    <select class="form-select mb-3" id="adressePays">
+                    <select required  id="adressePays" class="form-select mb-3">
                       <option value="" selected disabled>Non renseigné</option>
                       <option value="FR">France</option>
                       <option value="AF">Afghanistan</option>
@@ -418,19 +418,19 @@
                 <!-- tél fixe CLASSIC-->
                 <div class="row">
                   <div class="col-md">
-                    <input type="tel" class="form-control mb-3" placeholder="Téléphone fixe" id="telFixe" maxlength="10">
+                    <input required id="telFixe" type="tel" class="form-control mb-3" placeholder="Téléphone fixe" maxlength="10">
                   </div>
 
                   <!-- portable CLASSIC-->
 
                   <div class="col-md">
-                    <input type="tel" class="form-control mb-3" placeholder="Téléphone portable" id="telPortable">
+                    <input required id="telPortable" type="tel" class="form-control mb-3" placeholder="Téléphone portable">
                   </div>
                 </div>
                 <!-- email CLASSIC-->
                 <div class="row">
                   <div class="col">
-                    <input type="email" class="form-control mb-3" placeholder="Adresse email" id="courriel">
+                    <input required id="courriel" type="email" class="form-control mb-3" placeholder="Adresse email">
                   </div>
                 </div>
                 <!-- Résidence fiscale LISTE -->
@@ -442,7 +442,7 @@
 
                 <div class="row">
                   <div class="col">
-                    <select class="form-select mb-5" id="residenceFiscale">
+                    <select required id="residenceFiscale" class="form-select mb-5">
                       <option value="" selected disabled>Non renseigné</option>
                       <option value="FR">France</option>
                       <option value="AF">Afghanistan</option>
@@ -702,8 +702,7 @@
             <div class="modal-footer">
 
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-              <button type="submit" id="submitCivil" class="btn btn-success">Sauvegarder</button>
-              <p id="erreur"></p>
+              <button id="submitCivil" type="submit" class="btn btn-success">Sauvegarder</button>
             </div>
           </div>
         </div>
@@ -748,7 +747,7 @@
                   <div class="col">
                     <div class="form-group">
                       <label for="exampleInputPassword1">Contrat?</label>
-                      <input id="ContratMariage" type="text" placeholder="Si oui, précisez" class="form-control">
+                      <input id="contratMariage" type="text" placeholder="Si oui, précisez" class="form-control">
                     </div>
                   </div>
                 </div>
@@ -1016,7 +1015,6 @@
         </div>
       </div>
     </form>
-
 
     <form id="formPatrimoine">
       <div class="modal fade" id="modalPatrimoine" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
