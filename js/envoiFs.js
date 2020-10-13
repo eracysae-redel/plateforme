@@ -68,44 +68,12 @@ function writeUserData() {
     });
 }
 
-function sendCivil (){
+const submit = document.getElementById('submitCivil');
 
-    let erreurInput;
-    let erreurSelect;
-    const form = document.getElementById('formCivil');
-    const inputs = form.getElementsByTagName('input');
-    const selects = form.getElementsByTagName('select');
-    for (let i = 0; i < inputs.length; i++) {
-        if (!inputs[i].value) {
-            erreurInput = "Veuillez renseigner tous les champs !";
-        }
-    }
+submit.addEventListener('click',function () {
 
-    for (let i = 0; i < selects.length; i++) {
-        if (!selects[i].value) {
-            erreurSelect = "Veuillez séléctionner tous les champs !";
-        }
-    }
+    writeUserData();
 
-    if (erreurInput) {
-        alert('OLA !');
-        e.preventDefault();
-        document.getElementById('erreurInput').innerHTML = erreurInput;
-        return false;
-    } else if (erreurSelect) {
-        e.preventDefault();
-        document.getElementById('erreurSelect').innerHTML = erreurSelect;
-        return false;
-    }
-    else {
-        alert('Formulaire envoyé !');
-        writeUserData();
-        return true;
-    }
-}
-
-
-// La fonction writeUserData() vérifie l'existence ou pas d'un id, si ce dernier n'existes pas les informations sont envoyées à la BDD.
-// Un id unique est créer en combinant le getUserID() + la ref. client.
+});
 
 
