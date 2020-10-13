@@ -20,82 +20,92 @@ function getUserId() {
 
 }
 
-var form = document.getElementById('formCivil').addEventListener('submit', (e) => {
+function writeUserData() {
 
-    let erreur;
-    const inputs = this.getElementsByTagName('inputs');
-    const selects = this.getElementsByTagName('select');
+    const userId = getUserId();
+
+    var db = firebase.database();
+
+    db.ref().child('users/').orderByChild("id").equalTo(userId).once("value", snapshot => {
+        if (snapshot.exists()) {
+
+            alert('Utilisateur déjà existant !');
+            return 0;
+
+        } else {
+            db.ref('users/').child(userId).set(null);
+            db.ref('users/' + userId).child("id").set(userId);
+            db.ref('users/' + userId).child('Identite').set(null);
+            const identite = db.ref("users/" + userId + "Identite");
+
+            db.ref(identite).set({
+                "nom": document.getElementById('nom').value,
+                "prenom": document.getElementById('prenom').value,
+                "civilite": document.getElementById('civilite').value,
+                "nomDeNaissance": document.getElementById('nomNaissance').value,
+                "capaciteJuridique": document.getElementById('capaciteJuridique').value
+            });
+
+            db.ref('users/' + userId).child('Naissance').set(null);
+            const naissance = db.ref("users/" + userId + "Naissance");
+            db.ref(naissance).set({
+                "dateNaissance": document.getElementById('dateNaissance').value,
+                "lieuNaissance": document.getElementById('lieuNaissance').value,
+            });
+            db.ref('users/' + userId).child('Coordonnees').set(null);
+            const coordonnees = db.ref("users/" + userId + "Coordonnees");
+            db.ref(coordonnees).set({
+                "adresse": document.getElementById('adresse').value,
+                "codePostal": document.getElementById('adresseCP').value,
+                "ville": document.getElementById('adresseVille').value,
+                "pays": document.getElementById('adressePays').value,
+                "telFixe": document.getElementById('telFixe').value,
+                "telMobile": document.getElementById('telPortable').value,
+                "mail": document.getElementById('courriel').value,
+                "residenceFiscale": document.getElementById('residenceFiscale').value
+            });
+        }
+    });
+}
+
+function sendCivil (){
+
+    let erreurInput;
+    let erreurSelect;
+    const form = document.getElementById('formCivil');
+    const inputs = form.getElementsByTagName('input');
+    const selects = form.getElementsByTagName('select');
     for (let i = 0; i < inputs.length; i++) {
         if (!inputs[i].value) {
-            erreur = "Veuillez renseigner tous les champs !";
+            erreurInput = "Veuillez renseigner tous les champs !";
         }
     }
 
     for (let i = 0; i < selects.length; i++) {
         if (!selects[i].value) {
-            erreur = "Veuillez renseigner tous les champs !";
+            erreurSelect = "Veuillez séléctionner tous les champs !";
         }
     }
 
-    if (erreur) {
+    if (erreurInput) {
+        alert('OLA !');
         e.preventDefault();
-        document.getElementById('erreur').innerHTML = erreur;
+        document.getElementById('erreurInput').innerHTML = erreurInput;
         return false;
-    } else {
-        alert('Formulaire envoyé !');
+    } else if (erreurSelect) {
+        e.preventDefault();
+        document.getElementById('erreurSelect').innerHTML = erreurSelect;
+        return false;
     }
-});
+    else {
+        alert('Formulaire envoyé !');
+        writeUserData();
+        return true;
+    }
+}
 
 
 // La fonction writeUserData() vérifie l'existence ou pas d'un id, si ce dernier n'existes pas les informations sont envoyées à la BDD.
 // Un id unique est créer en combinant le getUserID() + la ref. client.
-function writeUserData() {
 
-  const userId = getUserId();
-  const refClient = document.getElementById('refClient').value;
-
-  var db = firebase.database();
-
-  db.ref().child('users/').orderByChild("id").equalTo(userId + refClient).once("value",snapshot => {
-      if (snapshot.exists()) {
-
-          alert('Utilisateur déjà existant !');
-          return 0;
-
-      } else {
-          db.ref('users/').child(userId).set(null);
-          db.ref('users/' + userId).child("id").set(userId + refClient);
-          db.ref('users/' + userId).child('Situation 1').set(null);
-          const ref = db.ref("users/" + userId + "/situation 1");
-
-          db.ref(ref).set({
-              "nom": document.getElementById('name').value,
-              "prenom": document.getElementById('fName').value,
-              "civilite": document.getElementById('gender').value,
-              "nomDeNaissance": document.getElementById('bName').value,
-              "refClient": document.getElementById('refClient').value,
-              "typeClient": document.getElementById('clientType').value,
-              "dateNaissance": document.getElementById('birthday').value,
-              "departementNaissance": document.getElementById('bDpt').value,
-              "adresse": document.getElementById('address').value,
-              "codePostal": document.getElementById('postal').value,
-              "ville": document.getElementById('city').value,
-              "pays": document.getElementById('country').value,
-              "telFixe": document.getElementById('hTel').value,
-              "telMobile": document.getElementById('codePhone').value + document.getElementById('mTel').value,
-              "mail": document.getElementById('email').value,
-              "residenceFiscale": document.getElementById('rCountry').value
-          });
-      }
-  });
-}
-
-// évènement d'envoie des données au clic du bouton sauvegarder (id : submit).
-const submit = document.getElementById('submit');
-
-submit.addEventListener('click',function (){
-
-    writeUserData();
-
-});
 
