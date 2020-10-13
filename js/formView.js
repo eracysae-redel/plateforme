@@ -23,6 +23,9 @@ situation.addEventListener("change",function (e){
             document.getElementById('prenomConjoint').setAttribute('required','true');
             document.getElementById('civiliteConjoint').setAttribute('required','true');
             document.getElementById('nomNaissanceConjoint').setAttribute('required','true');
+            document.getElementById('capaciteJuridiqueConjoint').setAttribute('required','true');
+            document.getElementById('dateNaissanceConjoint').setAttribute('required','true');
+            document.getElementById('lieuNaissanceConjoint').setAttribute('required','true');
             break;
 
         case "Pacs" :
@@ -39,6 +42,9 @@ situation.addEventListener("change",function (e){
             document.getElementById('prenomConjoint').setAttribute('required','true');
             document.getElementById('civiliteConjoint').setAttribute('required','true');
             document.getElementById('nomNaissanceConjoint').setAttribute('required','true');
+            document.getElementById('capaciteJuridiqueConjoint').setAttribute('required','true');
+            document.getElementById('dateNaissanceConjoint').setAttribute('required','true');
+            document.getElementById('lieuNaissanceConjoint').setAttribute('required','true');
             break;
 
         case "Divorcé" :
@@ -55,6 +61,9 @@ situation.addEventListener("change",function (e){
             document.getElementById('prenomConjoint').removeAttribute('required');
             document.getElementById('civiliteConjoint').removeAttribute('required');
             document.getElementById('nomNaissanceConjoint').removeAttribute('required');
+            document.getElementById('capaciteJuridiqueConjoint').removeAttribute('required');
+            document.getElementById('dateNaissanceConjoint').removeAttribute('required');
+            document.getElementById('lieuNaissanceConjoint').removeAttribute('required');
             break;
 
         default :
