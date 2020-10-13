@@ -570,23 +570,23 @@
                   <div>
                     <div class="row">
                       <div class="col-md">
-                        <input id="name" type="text" class="form-control mb-3" placeholder="Nom">
+                        <input id="nom" type="text" class="form-control mb-3" placeholder="Nom">
                       </div>
                       <div class="col-md">
-                        <input id="fName" type="text" class="form-control mb-3" placeholder="Prenom">
+                        <input id="prenom" type="text" class="form-control mb-3" placeholder="Prenom">
                       </div>
                     </div>
 
                     <div class="row">
                       <div class="col-md">
-                        <select class="form-control mb-3" id="gender">
+                        <select class="form-select mb-3" id="civilite">
                           <option>Civilité</option>
                           <option value="Mme">Madame</option>
                           <option value="M">Monsieur</option>
                         </select>
                       </div>
                       <div class="col-sm">
-                        <input type="text"  class="form-control mb-3" id="bName" placeholder="Nom de Naissance">
+                        <input type="text"  class="form-control mb-3" id="nomNaissance" placeholder="Nom de Naissance">
                       </div>
                     </div>
 
@@ -601,7 +601,7 @@
 
                     <div class="row">
                       <div class="col">
-                        <select class="form-select mb-3" id="legalCapacity">
+                        <select class="form-select mb-3" id="capaciteJuridique">
                           <option value="" selected disabled>Non renseigné</option>
                           <option>Majeur Capable</option>
                           <option>Tutelle</option>
@@ -626,7 +626,7 @@
 
                   <div class="row">
                     <div class="col">
-                      <input id="birthday" type="date" class="form-control mb-3" value="1960-01-01">
+                      <input id="dateNaissance" type="date" class="form-control mb-3" value="1960-01-01">
                     </div>
                   </div>
 
@@ -638,7 +638,7 @@
 
                   <div class="row">
                     <div class="col-sm">
-                      <input type="text" class="form-control mb-3" id="bName" placeholder="Ville">
+                      <input type="text" class="form-control mb-3" id="lieuNaissance" placeholder="Ville">
                     </div>
                   </div>
                 </div>
@@ -650,13 +650,13 @@
                   <!-- Adresse CLASSIC-->
                   <div class="row">
                     <div class="col">
-                      <input type="text" class="form-control mb-3" placeholder="Adresse" id="address">
+                      <input type="text" class="form-control mb-3" placeholder="Adresse" id="adresse">
                     </div>
                   </div>
                   <!-- Code Postal CLASSIC-->
                   <div class="row">
                     <div class="col-md">
-                      <input class="form-control mb-3" placeholder="Code postal" id="postal">
+                      <input class="form-control mb-3" placeholder="Code postal" id="adresseCP">
                     </div>
 
                     <!-- Ville CLASSIC-->
@@ -1215,7 +1215,7 @@
 
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-                <button type="button" class="btn btn-success" disabled="true" id="submit">Sauvegarder</button>
+                <button type="button" class="btn btn-success"  id="submit">Sauvegarder</button>
                 <p id="erreur"></p>
               </div>
             </div>
