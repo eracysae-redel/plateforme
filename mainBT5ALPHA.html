@@ -42,518 +42,6 @@
       </div>
     </div>
 
-    <form id="formPatrimoine">
-      <div class="modal fade" id="modalPatrimoine" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Situation Patrimoniale</h5>
-              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-
-              <!-- Revenus annuels du foyer fiscal -->
-              <div id="selectButton" class="row encart py-3 m-1 mb-5 pl-3">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center mb-3">Revenus annuels du foyer fiscal</h3>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="<50K" type="button" class="btn btn-outline-primary" style="width:70%;">moins de 50K€</button>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[50k-100k]" type="button" class="btn btn-outline-primary" style="width:70%;">Entre 50k€ et 100k€</button>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[100k-150k]" type="button" class="btn btn-outline-primary" style="width:70%;">Entre 100k et 150k</button>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value=">150K" type="button" class="btn btn-outline-primary" style="width:70%;">Entre 100k et 150k</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Estimation globale de votre patrimoine -->
-              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center mb-3">Estimation globale de votre patrimoine, dettes exclues</h3>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="<500k" type="button" class="btn btn-outline-primary" style="width:70%;">moins de 500 000€</button>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[500k-1000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 500k et 1M€</button>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[1000k-2000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 1M et 1,5M</button>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[2000k-5000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 2M et 5M</button>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class=".col-sm-6 .offset-sm-3">
-                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:35%;">plus de 5M</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Dettes -->
-              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center mb-3">Dettes</h3>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="<500k" type="button" class="btn btn-outline-primary" style="width:70%;">moins de 500 000€</button>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[500k-1000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 500k et 1M€</button>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[1000k-2000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 1M et 1,5M</button>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value="[2000k-5000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 2M et 5M</button>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:35%;">plus de 5M</button>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Repartition de votre patrimoine -->
-              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center mb-3">Repartition de votre patrimoine</h3>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <div class="input-group">
-                      <input type="text" class="form-control form-control" placeholder="Actifs finanicers" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2">%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Actifs immobiliers" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2">%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Actifs professionnels" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2">%</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-sm mb-3">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Autres (à préciser)" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2">%</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Etes-vous redevable de l'IFI ? -->
-              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center mb-3">Etes-vous redevable de l'IFI ?</h3>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-xs mb-3">
-                    <button onclick="selectButton()" value="Oui" type="button" class="btn btn-outline-primary" style="width:70%;">Oui</button>
-                  </div>
-                  <div class="col-xs mb-3">
-                    <button onclick="selectButton()" value="Non" type="button" class="btn btn-outline-primary" style="width:70%;">Non</button>
-                  </div>
-                </div>
-              </div>
-
-              <!--  Charges et engagements financiers (par mois) -->
-              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center mb-3">Charges et engagements financiers (par mois)</h3>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="col-sm mb-3">
-                    <div class="input-group">
-                      <input type="text" class="form-control" placeholder="Montant Mensuel" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                      <div class="input-group-append">
-                        <span class="input-group-text" id="basic-addon2">€</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Capacité d'éparne estimée (par mois) -->
-              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center mb-3">Capacité d'épargne estimée (par mois)</h3>
-                  </div>
-                </div>
-                <div class="row text-center">
-                  <div class="input-group">
-                    <input type="text" class="form-control" placeholder="Montant Mensuel" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                    <div class="input-group-append">
-                      <span class="input-group-text" id="basic-addon2">€</span>
-                    </div>
-                  </div>
-                </div>
-
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-              <button type="submit" class="btn btn-success">Sauvegarder</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-
-    <form id="formProfessionnel">
-      <div class="modal fade" id="modalProfessionnel" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="staticBackdropLabel">Situation Professionelle</h5>
-              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-              <div class="row encart py-3 m-1 mb-5">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center">Votre situation</h3>
-                  </div>
-                </div>
-
-                <div class="row mb- 5">
-                  <div class="col-md">
-
-                    <label for="">Situation actuelle : </label>
-                    <select class="form-select mb-3" id="situPro">
-                      <option disabled selected>Non défini</option>
-                      <option>En activité</option>
-                      <option>Sans profession</option>
-                      <option>Au chômage</option>
-                      <option>Retraité</option>
-                    </select>
-                  </div>
-
-                  <div class="col-md">
-                    <label for="">Métier : </label>
-                    <input type="text" class="form-control mb-3" placeholder="ex : menuisier">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md">
-                    <div class="form-check form-switch mb-3">
-                      <label class="form-check-label" for="dirigeant">Etes vous dirigeant d'entreprise?</label>
-                      <input class="form-check-input" type="checkbox" id="dirigeant">
-                    </div>
-                  </div>
-                </div>
-
-                <div id="clientEntreprise" hidden>
-                  <div class="row">
-                    <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
-                    </div>
-
-                    <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Forme juridique">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Adresse du siège social">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div hidden class="row encart m-1 py-3 mb-5" id="conjointe">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center">Situation conjoint(e)</h3>
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md">
-
-                    <label for="">Situation actuelle : </label>
-                    <select class="form-select mb-3" id="sqsituPro">
-                      <option disabled selected>Non défini</option>
-                      <option>En activité</option>
-                      <option>Sans profession</option>
-                      <option>Au chômage</option>
-                      <option>Retraité</option>
-                    </select>
-                  </div>
-
-                  <div class="col-md">
-                    <label for="">Métier : </label>
-                    <input type="text" class="form-control mb-3" placeholder="ex : menuisier">
-                  </div>
-                </div>
-
-                <div class="row">
-                  <div class="col-md">
-                    <div class="form-check form-switch mb-3">
-                      <label class="form-check-label" for="conjointDirigeant">Est il/elle dirigeant(e)?</label>
-                      <input class="form-check-input" type="checkbox" id="conjointDirigeant">
-                    </div>
-                  </div>
-                </div>
-
-                <div id="conjointEntreprise" hidden>
-                  <div class="row">
-                    <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
-                    </div>
-
-                    <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Forme juridique">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Adresse du siège social">
-                    </div>
-                  </div>
-
-                </div>
-              </div>
-
-              <div class="row encart m-1 py-3 mb-5">
-                <div class="row">
-                  <div class="col">
-                    <h3 class="text-info text-center">Informations supplementaires</h3>
-                  </div>
-                </div>
-
-                <div class="row ">
-                  <div class="col-md">
-                    <label for="">Informations suceptibles d'influencer votre situation patrimoniale actuelle ou future</label>
-                    <div class="input-group">
-                      <textarea class="form-control" aria-label="With textarea"></textarea>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-              <button type="submit" class="btn btn-success">Sauvegarder</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-
-    <form id="formSituationFamilliale">
-      <div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-scrollable">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h3 class="modal-title" id="staticBackdropLabel">Famille</h3>
-              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
-            </div>
-
-            <div class="modal-body">
-              <!-- Modal 2 : Situation Familliale -->
-              <div class="row encart m-1 py-3 mb-5">
-                <h3 class="mb-3 text-center text-info">Situation Matrimoniale</h3>
-
-                <div class="row">
-                  <div class="col">
-                    <select required class="form-control mb-3" id="situationMatri">
-                      <option value="" selected disabled>Non renseigné</option>
-                      <option value="Mariage">Marié(é)</option>
-                      <option value="Pacs">Pacsé(é)</option>
-                      <option value="Celibataire">Célibataire</option>
-                      <option value="Veuf">Veuf(ve)</option>
-                      <option value="Divorcé">Divorcé(e)</option>
-                      <option value="Union libre">Union libre</option>
-                    </select>
-                  </div>
-                </div>
-
-                <div id="mariage" hidden class="row">
-                  <div class="col">
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Depuis?</label>
-                      <input type="date" class="form-control" id="exampleInputPassword1">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Contrat?</label>
-                      <input type="text" placeholder="Si oui, précisez" class="form-control" id="exampleInputPassword1">
-                    </div>
-                  </div>
-                </div>
-
-                <div id="pacs" hidden class="row">
-                  <div class="col">
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Depuis?</label>
-                      <input type="date" class="form-control" id="exampleInputPassword1">
-                    </div>
-                  </div>
-                  <div class="col">
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Convention?</label>
-                      <input type="text" placeholder="précisez laquelle" class="form-control" id="exampleInputPassword1">
-                    </div>
-                  </div>
-                </div>
-
-                <div id="divorce" hidden class="row">
-                  <div class="col">
-                    <div class="form-group">
-                      <label for="exampleInputPassword1">Depuis?</label>
-                      <input type="date" class="form-control" id="exampleInputPassword1">
-                    </div>
-                  </div>
-                </div>
-
-                <div hidden id="infoConjoint">
-                  <h3 class="text-center text-info mt-3">Indentité Conjoint(e)</h3>
-
-                  <div class="row">
-                    <div class="col-sm">
-                      <input id="nameConjoint" type="text" class="form-control mb-3" placeholder="Nom">
-                    </div>
-                    <div class="col-sm">
-                      <input id="fNameConjoint" type="text" class="form-control mb-3" placeholder="Prenom">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm">
-                      <select class="form-control mb-3" id="genderConjoint">
-                        <option>Civilité</option>
-                        <option value="Mme">Madame</option>
-                        <option value="M">Monsieur</option>
-                      </select>
-                    </div>
-                    <div class="col-sm">
-                      <input type="text" class="form-control mb-3" id="bNameConjoint" placeholder="Nom de Naissance">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col">
-                      <h6>Capacité juridique:</h6>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col">
-                      <select class="form-control mb-3" id="legalCapacityConjoint">
-                        <option value="" selected disabled>Non renseigné</option>
-                        <option>Majeur Capable</option>
-                        <option>Tutelle</option>
-                        <option>Curatelle</option>
-                      </select>
-                    </div>
-                  </div>
-
-                  <h3 class="text-center text-info">Naissance conjoint(e)</h3>
-
-                  <div class="row">
-                    <div class="col">
-                      <h6>Date de naissance:</h6>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col">
-                      <input id="birthdayConjoint" type="date" class="form-control mb-3" value="1960-01-01">
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm">
-                      <h6 class="text-dark">Lieu de naissance:</h6>
-                    </div>
-                  </div>
-
-                  <div class="row">
-                    <div class="col-sm">
-                      <input type="text" class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div class="row encart m-1 py-3 mb-5">
-                <h3 class="mb-1 text-center text-info">Enfants, personnes à charge</h3>
-
-                <div class="row">
-                  <div class="col-sm">
-                    <button id="addEnfant" type="button" class="m-5 btn btn-success btn-sm"> + Ajouter une personne</button>
-                  </div>
-                </div>
-
-                <div class="row" id="enfants">
-                  <div class="col-sm"></div>
-                </div>
-              </div>
-            </div>
-
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
-              <button type="submit" class="btn btn-success" id="submitFamille">Sauvegarder</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </form>
-
     <form id="formEtatCivil">
       <div class="modal fade" id="modalEtatCivil" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
         <div class="modal-dialog modal-lg modal-dialog-scrollable">
@@ -1216,6 +704,519 @@
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
               <button type="submit" class="btn btn-success">Sauvegarder</button>
               <p id="erreur"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form id="formSituationFamilliale">
+      <div class="modal fade" id="modalFamille" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title" id="staticBackdropLabel">Famille</h3>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <!-- Modal 2 : Situation Familliale -->
+              <div class="row encart m-1 py-3 mb-5">
+                <h3 class="mb-3 text-center text-info">Situation Matrimoniale</h3>
+
+                <div class="row">
+                  <div class="col">
+                    <select required class="form-control mb-3" id="situationMatri">
+                      <option value="" selected disabled>Non renseigné</option>
+                      <option value="Mariage">Marié(é)</option>
+                      <option value="Pacs">Pacsé(é)</option>
+                      <option value="Celibataire">Célibataire</option>
+                      <option value="Veuf">Veuf(ve)</option>
+                      <option value="Divorcé">Divorcé(e)</option>
+                      <option value="Union libre">Union libre</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div id="mariage" hidden class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Depuis?</label>
+                      <input type="date" class="form-control" id="exampleInputPassword1">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Contrat?</label>
+                      <input type="text" placeholder="Si oui, précisez" class="form-control" id="exampleInputPassword1">
+                    </div>
+                  </div>
+                </div>
+
+                <div id="pacs" hidden class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Depuis?</label>
+                      <input type="date" class="form-control" id="exampleInputPassword1">
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Convention?</label>
+                      <input type="text" placeholder="précisez laquelle" class="form-control" id="exampleInputPassword1">
+                    </div>
+                  </div>
+                </div>
+
+                <div id="divorce" hidden class="row">
+                  <div class="col">
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Depuis?</label>
+                      <input type="date" class="form-control" id="exampleInputPassword1">
+                    </div>
+                  </div>
+                </div>
+
+                <div hidden id="infoConjoint">
+                  <h3 class="text-center text-info mt-3">Indentité Conjoint(e)</h3>
+
+                  <div class="row">
+                    <div class="col-sm">
+                      <input id="nameConjoint" type="text" class="form-control mb-3" placeholder="Nom">
+                    </div>
+                    <div class="col-sm">
+                      <input id="fNameConjoint" type="text" class="form-control mb-3" placeholder="Prenom">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm">
+                      <select class="form-control mb-3" id="genderConjoint">
+                        <option>Civilité</option>
+                        <option value="Mme">Madame</option>
+                        <option value="M">Monsieur</option>
+                      </select>
+                    </div>
+                    <div class="col-sm">
+                      <input type="text" class="form-control mb-3" id="bNameConjoint" placeholder="Nom de Naissance">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <h6>Capacité juridique:</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <select class="form-control mb-3" id="legalCapacityConjoint">
+                        <option value="" selected disabled>Non renseigné</option>
+                        <option>Majeur Capable</option>
+                        <option>Tutelle</option>
+                        <option>Curatelle</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <h3 class="text-center text-info">Naissance conjoint(e)</h3>
+
+                  <div class="row">
+                    <div class="col">
+                      <h6>Date de naissance:</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col">
+                      <input id="birthdayConjoint" type="date" class="form-control mb-3" value="1960-01-01">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm">
+                      <h6 class="text-dark">Lieu de naissance:</h6>
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-sm">
+                      <input type="text" class="form-control mb-3" id="bNameConjoint" placeholder="Ville">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row encart m-1 py-3 mb-5">
+                <h3 class="mb-1 text-center text-info">Enfants, personnes à charge</h3>
+
+                <div class="row">
+                  <div class="col-sm">
+                    <button id="addEnfant" type="button" class="m-5 btn btn-success btn-sm"> + Ajouter une personne</button>
+                  </div>
+                </div>
+
+                <div class="row" id="enfants">
+                  <div class="col-sm"></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+              <button type="submit" class="btn btn-success" id="submitFamille">Sauvegarder</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+    <form id="formProfessionnel">
+      <div class="modal fade" id="modalProfessionnel" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Situation Professionelle</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+              <div class="row encart py-3 m-1 mb-5">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center">Votre situation</h3>
+                  </div>
+                </div>
+
+                <div class="row mb- 5">
+                  <div class="col-md">
+
+                    <label for="">Situation actuelle : </label>
+                    <select class="form-select mb-3" id="situPro">
+                      <option disabled selected>Non défini</option>
+                      <option>En activité</option>
+                      <option>Sans profession</option>
+                      <option>Au chômage</option>
+                      <option>Retraité</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md">
+                    <label for="">Métier : </label>
+                    <input type="text" class="form-control mb-3" placeholder="ex : menuisier">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md">
+                    <div class="form-check form-switch mb-3">
+                      <label class="form-check-label" for="dirigeant">Etes vous dirigeant d'entreprise?</label>
+                      <input class="form-check-input" type="checkbox" id="dirigeant">
+                    </div>
+                  </div>
+                </div>
+
+                <div id="clientEntreprise" hidden>
+                  <div class="row">
+                    <div class="col-md">
+                      <input type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                    </div>
+
+                    <div class="col-md">
+                      <input type="text" class="form-control mb-3" placeholder="Forme juridique">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md">
+                      <input type="text" class="form-control mb-3" placeholder="Adresse du siège social">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div hidden class="row encart m-1 py-3 mb-5" id="conjointe">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center">Situation conjoint(e)</h3>
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md">
+
+                    <label for="">Situation actuelle : </label>
+                    <select class="form-select mb-3" id="sqsituPro">
+                      <option disabled selected>Non défini</option>
+                      <option>En activité</option>
+                      <option>Sans profession</option>
+                      <option>Au chômage</option>
+                      <option>Retraité</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md">
+                    <label for="">Métier : </label>
+                    <input type="text" class="form-control mb-3" placeholder="ex : menuisier">
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-md">
+                    <div class="form-check form-switch mb-3">
+                      <label class="form-check-label" for="conjointDirigeant">Est il/elle dirigeant(e)?</label>
+                      <input class="form-check-input" type="checkbox" id="conjointDirigeant">
+                    </div>
+                  </div>
+                </div>
+
+                <div id="conjointEntreprise" hidden>
+                  <div class="row">
+                    <div class="col-md">
+                      <input type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                    </div>
+
+                    <div class="col-md">
+                      <input type="text" class="form-control mb-3" placeholder="Forme juridique">
+                    </div>
+                  </div>
+
+                  <div class="row">
+                    <div class="col-md">
+                      <input type="text" class="form-control mb-3" placeholder="Adresse du siège social">
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+
+              <div class="row encart m-1 py-3 mb-5">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center">Informations supplementaires</h3>
+                  </div>
+                </div>
+
+                <div class="row ">
+                  <div class="col-md">
+                    <label for="">Informations suceptibles d'influencer votre situation patrimoniale actuelle ou future</label>
+                    <div class="input-group">
+                      <textarea class="form-control" aria-label="With textarea"></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+              <button type="submit" class="btn btn-success">Sauvegarder</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+
+
+    <form id="formPatrimoine">
+      <div class="modal fade" id="modalPatrimoine" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="staticBackdropLabel">Situation Patrimoniale</h5>
+              <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+
+            <div class="modal-body">
+
+              <!-- Revenus annuels du foyer fiscal -->
+              <div id="selectButton" class="row encart py-3 m-1 mb-5 pl-3">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center mb-3">Revenus annuels du foyer fiscal</h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="<50K" type="button" class="btn btn-outline-primary" style="width:70%;">moins de 50K€</button>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[50k-100k]" type="button" class="btn btn-outline-primary" style="width:70%;">Entre 50k€ et 100k€</button>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[100k-150k]" type="button" class="btn btn-outline-primary" style="width:70%;">Entre 100k et 150k</button>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value=">150K" type="button" class="btn btn-outline-primary" style="width:70%;">Entre 100k et 150k</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Estimation globale de votre patrimoine -->
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center mb-3">Estimation globale de votre patrimoine, dettes exclues</h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="<500k" type="button" class="btn btn-outline-primary" style="width:70%;">moins de 500 000€</button>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[500k-1000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 500k et 1M€</button>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[1000k-2000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 1M et 1,5M</button>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[2000k-5000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 2M et 5M</button>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class=".col-sm-6 .offset-sm-3">
+                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:35%;">plus de 5M</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Dettes -->
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center mb-3">Dettes</h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="<500k" type="button" class="btn btn-outline-primary" style="width:70%;">moins de 500 000€</button>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[500k-1000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 500k et 1M€</button>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[1000k-2000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 1M et 1,5M</button>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value="[2000k-5000k]" type="button" class="btn btn-outline-primary" style="width:70%;">entre 2M et 5M</button>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <button onclick="selectButton()" value=">5000k" type="button" class="btn btn-outline-primary" style="width:35%;">plus de 5M</button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Repartition de votre patrimoine -->
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center mb-3">Repartition de votre patrimoine</h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control form-control" placeholder="Actifs finanicers" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Actifs immobiliers" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Actifs professionnels" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">%</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-sm mb-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Autres (à préciser)" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">%</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Etes-vous redevable de l'IFI ? -->
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center mb-3">Etes-vous redevable de l'IFI ?</h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-xs mb-3">
+                    <button onclick="selectButton()" value="Oui" type="button" class="btn btn-outline-primary" style="width:70%;">Oui</button>
+                  </div>
+                  <div class="col-xs mb-3">
+                    <button onclick="selectButton()" value="Non" type="button" class="btn btn-outline-primary" style="width:70%;">Non</button>
+                  </div>
+                </div>
+              </div>
+
+              <!--  Charges et engagements financiers (par mois) -->
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center mb-3">Charges et engagements financiers (par mois)</h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="col-sm mb-3">
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Montant Mensuel" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                      <div class="input-group-append">
+                        <span class="input-group-text" id="basic-addon2">€</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Capacité d'éparne estimée (par mois) -->
+              <div id="" class="row encart py-3 m-1 mb-5 pl-3">
+                <div class="row">
+                  <div class="col">
+                    <h3 class="text-info text-center mb-3">Capacité d'épargne estimée (par mois)</h3>
+                  </div>
+                </div>
+                <div class="row text-center">
+                  <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Montant Mensuel" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                      <span class="input-group-text" id="basic-addon2">€</span>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+              <button type="submit" class="btn btn-success">Sauvegarder</button>
             </div>
           </div>
         </div>
