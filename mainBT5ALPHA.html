@@ -7,7 +7,11 @@
     <title>Plateforme Client</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
     <link rel="stylesheet" href="css/style.css">
-
+    <script type="text/javascript">
+    window.onbeforeunload = function() {
+      return "Modifications en cours, êtes vous sûr de vouloir rafraïchir la page ?";
+    }
+  </script>
   </head>
 
   <body>
@@ -550,8 +554,9 @@
         </form>
       </div>
 
-      <div class="modal fade" id="modalEtatCivil" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <form>
+  <form id="formCivil">
+        <div class="modal fade" id="modalEtatCivil" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+
           <div class="modal-dialog modal-lg modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
@@ -1211,12 +1216,12 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
                 <button type="button" class="btn btn-success" disabled="true" id="submit">Sauvegarder</button>
+                <p id="erreur"></p>
               </div>
             </div>
           </div>
-        </form>
-      </div>
-
+        </div>
+</form>
     </div>
 
 
