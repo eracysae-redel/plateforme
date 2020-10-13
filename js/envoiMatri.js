@@ -1,6 +1,4 @@
-const db = firebase.database();
-
-function writeUserData() {
+function writeUserDataFamille() {
 
     const userId = sessionStorage.getItem('userId');
 
@@ -53,7 +51,7 @@ submit.addEventListener('click', function () {
 
     let mariage = document.getElementById('situationMatrimoniale').value;
     sessionStorage.setItem('mariage',mariage);
-    writeUserData();
+    writeUserDataFamille();
 
 });
 
