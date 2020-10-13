@@ -175,5 +175,3 @@ toggleConjoint.addEventListener('change',function (){
         document.getElementById('conjointEntreprise').setAttribute('hidden',true);
     }
 });
-
-
