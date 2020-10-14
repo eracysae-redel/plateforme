@@ -47,7 +47,7 @@ situation.addEventListener("change",function (e){
             document.getElementById('lieuNaissanceConjoint').setAttribute('required','true');
             break;
 
-        case "Divorcé" :
+        case "Divorce" :
             divorce.removeAttribute("hidden");
             pacs.setAttribute("hidden",true);
             mariage.setAttribute('hidden',true);
@@ -116,7 +116,6 @@ function supprChildren(child){
 function addChildren(){
 
     counter++;
-    const nom = 'Enfant ';
     const target = document.getElementById("enfants");
     const div = document.createElement('div');
     div.setAttribute('id','marmot'+counter);
@@ -138,18 +137,18 @@ function addChildren(){
         '        <p>Informations : </p>\n' +
         '        <div class="row mb-2">\n' +
         '            <div class="col">\n' +
-        '                <input class="form-control form-control-sm" type="text" placeholder="Nom">\n' +
+        '                <input id="nomEnfant'+ counter + '" class="form-control form-control-sm" type="text" placeholder="Nom">\n' +
         '            </div>\n' +
         '            <div class="col">\n' +
-        '                <input class="form-control form-control-sm" type="text" placeholder="Prénom">\n' +
+        '                <input id="prenomEnfant'+ counter + '"class="form-control form-control-sm" type="text" placeholder="Prénom">\n' +
         '            </div>\n' +
         '        </div>\n' +
         '        <div class="row mb-2">\n' +
         '            <div class="col">\n' +
-        '                <input class="form-control form-control-sm" type="text" placeholder="Lieu Naissance">\n' +
+        '                <input id="lieuNaissanceEnfant'+ counter + '" class="form-control form-control-sm" type="text" placeholder="Lieu Naissance">\n' +
         '            </div>\n' +
         '            <div class="col">\n' +
-        '                <input id="dateNaissanceEnfant1" placeholder="Date Naissance" class="form-control form-control-sm" type="text" onfocus="(this.type=\'date\')">\n' +
+        '                <input id="dateNaissanceEnfant'+ counter + '" placeholder="Date Naissance" class="form-control form-control-sm" type="text" onfocus="(this.type=\'date\')">\n' +
         '            </div>\n' +
         '        </div>\n' +
         '        <div class="row mt-4 mb-2">\n' +
@@ -157,7 +156,7 @@ function addChildren(){
         '                <p>Lien de parenté:</p>\n' +
         '            </div>\n' +
         '            <div class="col">\n' +
-        '                <select class="form-select form-select-sm" id="">\n' +
+        '                <select class="form-select form-select-sm" id="lienParenteEnfant'+ counter + '">\n' +
         '                    <option value="" selected="" disabled="">Non renseigné</option>\n' +
         '                    <option>Enfant du couple</option>\n' +
         '                    <option>Enfant de votre conjointe uniquement</option>\n' +
@@ -167,8 +166,8 @@ function addChildren(){
         '        </div>\n' +
         '        <div class="row my-3 ml-1">\n' +
         '            <div class="form-check form-switch">\n' +
-        '                <input class="form-check-input" type="checkbox" id="foyerfical">\n' +
-        '                <label class="form-check-label" for="foyerfical">Dépent il/elle de votre foyer fiscal?</label>\n' +
+        '                <input class="form-check-input" type="checkbox" id="foyerfical'+counter+'">\n' +
+        '                <label class="form-check-label" for="foyerfical'+counter+'">Dépent il/elle de votre foyer fiscal?</label>\n' +
         '            </div>\n' +
         '        </div>\n' +
         '\n' +
