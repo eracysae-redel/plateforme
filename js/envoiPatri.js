@@ -129,7 +129,7 @@ dette4.addEventListener('click', function () {
 });
 
 dette5.addEventListener('click', function () {
-   detteAnnuel = dette1;
+   detteAnnuel = dette5;
    detteAnnuel.setAttribute('class','choisi btn btn-outline-primary');
    dette2.setAttribute('class','btn btn-outline-primary');
    dette3.setAttribute('class','btn btn-outline-primary');
