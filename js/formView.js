@@ -96,6 +96,13 @@ function supprChildren(child){
                         document.getElementById('marmot' + (j+1)).setAttribute('id', 'marmot1');
                         document.getElementById('hName' + (j+1)).innerHTML = 'Enfant 1';
                         document.getElementById('hName' + (j+1)).setAttribute('id','hName1');
+                        document.getElementById('nomEnfant' + (j +1)).setAttribute('id','nomEnfant1');
+                        document.getElementById('prenomEnfant' + (j +1)).setAttribute('id','prenomEnfant1');
+                        document.getElementById('lieuNaissanceEnfant' + (j +1)).setAttribute('id','lieuNaissanceEnfant1');
+                        document.getElementById('dateNaissanceEnfant' + (j +1)).setAttribute('id','dateNaissanceEnfant1');
+                        document.getElementById('lienParenteEnfant' + (j +1)).setAttribute('id','lienParenteEnfant1');
+                        document.getElementById('foyerFiscal' + (j +1)).setAttribute('id','foyerFiscal1');
+                        document.getElementById('foyerFiscal' + (j +1)).setAttribute('for','foyerFiscal1');
                         break;
 
                     } else {
@@ -103,7 +110,14 @@ function supprChildren(child){
                         document.getElementById('addChild' + (j + 1)).setAttribute('id', 'addChild' + j);
                         document.getElementById('marmot' + (j + 1)).setAttribute('id', 'marmot' + j);
                         document.getElementById('hName' + (j + 1)).innerHTML = 'Enfant ' + j;
-                        document.getElementById('hName' + (j +1)).setAttribute('id','hName' + j);
+                        document.getElementById('hName' + (j+1)).setAttribute('id','hName' + j);
+                        document.getElementById('nomEnfant' + (j +1)).setAttribute('id','nomEnfant' + j);
+                        document.getElementById('prenomEnfant' + (j +1)).setAttribute('id','prenomEnfant' + j);
+                        document.getElementById('lieuNaissanceEnfant' + (j +1)).setAttribute('id','lieuNaissanceEnfant' + j);
+                        document.getElementById('dateNaissanceEnfant' + (j +1)).setAttribute('id','dateNaissanceEnfant' + j);
+                        document.getElementById('lienParenteEnfant' + (j +1)).setAttribute('id','lienParenteEnfant' + j);
+                        document.getElementById('foyerFiscal' + (j +1)).setAttribute('id','foyerFiscal' + j);
+                        document.getElementById('foyerFiscal' + (j +1)).setAttribute('for','foyerFiscal' + j);
                     }
                 }
 
@@ -166,8 +180,8 @@ function addChildren(){
         '        </div>\n' +
         '        <div class="row my-3 ml-1">\n' +
         '            <div class="form-check form-switch">\n' +
-        '                <input class="form-check-input" type="checkbox" id="foyerfical'+counter+'">\n' +
-        '                <label class="form-check-label" for="foyerfical'+counter+'">Dépent il/elle de votre foyer fiscal?</label>\n' +
+        '                <input class="form-check-input" type="checkbox" id="foyerFiscal'+counter+'">\n' +
+        '                <label class="form-check-label" for="foyerFical'+counter+'">Dépent il/elle de votre foyer fiscal?</label>\n' +
         '            </div>\n' +
         '        </div>\n' +
         '\n' +

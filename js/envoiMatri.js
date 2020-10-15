@@ -46,11 +46,29 @@ function writeUserDataFamille() {
         });
     }
 
-    if (counter >= 0) {
+    db.ref('users/' + user + '/Situation Familliale').child('Personnes à charge').set(null);
 
+    if (counter > 0) {
+        for(let i = 1; i<=counter ; i++) {
+
+            let toggle = '';
+
+            if(document.getElementById('foyerFiscal'+i).checked) {
+                toggle = 'Oui';
+            } else {
+                toggle = 'Non';
+            }
+
+            db.ref('users/' + user + '/Situation Familliale' + '/Personnes à charge').child('Enfant ' + i).set({
+                'Nom' : document.getElementById('nomEnfant' + i).value,
+                'Prénom': document.getElementById('prenomEnfant' + i).value,
+                'Lieu de naissance': document.getElementById('lieuNaissanceEnfant' + i).value,
+                'Date de naissance': document.getElementById('dateNaissanceEnfant' + i).value,
+                'Lien de parenté': document.getElementById('lienParenteEnfant' + i).value,
+                'Rattaché au foyer fiscal' : toggle
+            });
+        }
     }
-
-
 }
 
 const submitFamille = document.getElementById('submitFamille');
