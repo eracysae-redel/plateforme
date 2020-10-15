@@ -6,9 +6,15 @@ function writeUserPro () {
     const toggleConjoint = document.getElementById('conjointDirigeant');
     db.ref('users/' + user).child('Situation Professionnelle').set(null);
 
+    alert(user);
+    alert(conjoint);
+    alert(toggle.checked);
+    alert(toggleConjoint.checked);
+
+
     if(conjoint === 'Mariage' || conjoint === 'Pacs') {
         if(toggle.checked && toggleConjoint.checked) {
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Client').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Client').set({
                 'Situation Actuelle' : document.getElementById('situationPro').value,
                 'Metier' : document.getElementById('metier').value,
                 'Denomination Entreprise' : document.getElementById('nomEntreprise').value,
@@ -16,7 +22,7 @@ function writeUserPro () {
                 'Adresse Entrprise' : document.getElementById('adresseEntreprise').value
             });
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Conjoint(e)').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Conjoint(e)').set({
                 'Situation Actuelle' : document.getElementById('situationProConjointe').value,
                 'Métier' : document.getElementById('metierConjoint').value,
                 'Denomination Enreprise' : document.getElementById('nomEntrepriseConjoint').value,
@@ -25,14 +31,14 @@ function writeUserPro () {
             });
 
             if(document.getElementById('infoPro').value) {
-                db.ref('users/' + user + '/Situation Profesionnelle').child('Informations Supplémentaires').set({
+                db.ref('users/' + user + '/Situation Professionnelle').child('Informations Supplémentaires').set({
                     'Informations' : document.getElementById('infoPro').value
                 });
             }
 
         } else if (toggle.checked && !toggleConjoint.checked) {
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Client').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Client').set({
                 'Situation Actuelle' : document.getElementById('situationPro').value,
                 'Metier' : document.getElementById('metier').value,
                 'Denomination Entreprise' : document.getElementById('nomEntreprise').value,
@@ -40,25 +46,25 @@ function writeUserPro () {
                 'Adresse Entrprise' : document.getElementById('adresseEntreprise').value
             });
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Conjoint(e)').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Conjoint(e)').set({
                 'Situation Actuelle': document.getElementById('situationProConjointe').value,
                 'Métier': document.getElementById('metierConjoint').value,
             });
 
             if(document.getElementById('infoPro').value) {
-                db.ref('users/' + user + '/Situation Profesionnelle').child('Informations Supplémentaires').set({
+                db.ref('users/' + user + '/Situation Professionnelle').child('Informations Supplémentaires').set({
                     'Informations' : document.getElementById('infoPro').value
                 });
             }
 
         } else if (!toggle.checked && toggleConjoint.checked) {
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Client').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Client').set({
                 'Situation Actuelle': document.getElementById('situationPro').value,
                 'Metier': document.getElementById('metier').value,
             });
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Conjoint(e)').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Conjoint(e)').set({
                 'Situation Actuelle' : document.getElementById('situationProConjointe').value,
                 'Métier' : document.getElementById('metierConjoint').value,
                 'Denomination Enreprise' : document.getElementById('nomEntrepriseConjoint').value,
@@ -67,25 +73,25 @@ function writeUserPro () {
             });
 
             if(document.getElementById('infoPro').value) {
-                db.ref('users/' + user + '/Situation Profesionnelle').child('Informations Supplémentaires').set({
+                db.ref('users/' + user + '/Situation Professionnelle').child('Informations Supplémentaires').set({
                     'Informations' : document.getElementById('infoPro').value
                 });
             }
 
         } else {
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Client').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Client').set({
                 'Situation Actuelle': document.getElementById('situationPro').value,
                 'Metier': document.getElementById('metier').value,
             });
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Conjoint(e)').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Conjoint(e)').set({
                 'Situation Actuelle': document.getElementById('situationProConjointe').value,
                 'Métier': document.getElementById('metierConjoint').value,
             });
 
             if(document.getElementById('infoPro').value) {
-                db.ref('users/' + user + '/Situation Profesionnelle').child('Informations Supplémentaires').set({
+                db.ref('users/' + user + '/Situation Professionnelle').child('Informations Supplémentaires').set({
                     'Informations' : document.getElementById('infoPro').value
                 });
             }
@@ -95,7 +101,7 @@ function writeUserPro () {
     } else {
         if (toggle.checked) {
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Client').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Client').set({
                 'Situation Actuelle' : document.getElementById('situationPro').value,
                 'Metier' : document.getElementById('metier').value,
                 'Denomination Entreprise' : document.getElementById('nomEntreprise').value,
@@ -104,20 +110,20 @@ function writeUserPro () {
             });
 
             if(document.getElementById('infoPro').value) {
-                db.ref('users/' + user + '/Situation Profesionnelle').child('Informations Supplémentaires').set({
+                db.ref('users/' + user + '/Situation Professionnelle').child('Informations Supplémentaires').set({
                     'Informations' : document.getElementById('infoPro').value
                 });
             }
 
         } else {
 
-            db.ref('users/' + user + '/Situation Profesionnelle').child('Situation Client').set({
+            db.ref('users/' + user + '/Situation Professionnelle').child('Situation Client').set({
                 'Situation Actuelle': document.getElementById('situationPro').value,
                 'Metier': document.getElementById('metier').value,
             });
 
             if(document.getElementById('infoPro').value) {
-                db.ref('users/' + user + '/Situation Profesionnelle').child('Informations Supplémentaires').set({
+                db.ref('users/' + user + '/Situation Professionnelle').child('Informations Supplémentaires').set({
                     'Informations' : document.getElementById('infoPro').value
                 });
             }
