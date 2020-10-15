@@ -886,7 +886,7 @@
                   <div class="col-md">
 
                     <label for="">Situation actuelle : </label>
-                    <select class="form-select mb-3" id="situPro">
+                    <select  id="situationPro" class="form-select mb-3">
                       <option disabled selected>Non défini</option>
                       <option>En activité</option>
                       <option>Sans profession</option>
@@ -897,7 +897,7 @@
 
                   <div class="col-md">
                     <label for="">Métier : </label>
-                    <input type="text" class="form-control mb-3" placeholder="ex : menuisier">
+                    <input id="metier" type="text" class="form-control mb-3" placeholder="ex : menuisier">
                   </div>
                 </div>
 
@@ -905,7 +905,7 @@
                   <div class="col-md">
                     <div class="form-check form-switch mb-3">
                       <label class="form-check-label" for="dirigeant">Etes vous dirigeant d'entreprise?</label>
-                      <input class="form-check-input" type="checkbox" id="dirigeant">
+                      <input id="dirigeant" class="form-check-input" type="checkbox">
                     </div>
                   </div>
                 </div>
@@ -913,23 +913,23 @@
                 <div id="clientEntreprise" hidden>
                   <div class="row">
                     <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                      <input id="nomEntreprise" type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
                     </div>
 
                     <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Forme juridique">
+                      <input id="formeJuridiqueEntreprise" type="text" class="form-control mb-3" placeholder="Forme juridique">
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Adresse du siège social">
+                      <input id="adresseEntreprise" type="text" class="form-control mb-3" placeholder="Adresse du siège social">
                     </div>
                   </div>
                 </div>
               </div>
 
-              <div hidden class="row encart m-1 py-3 mb-5" id="conjointe">
+              <div id="conjointe" hidden class="row encart m-1 py-3 mb-5" >
                 <div class="row">
                   <div class="col">
                     <h3 class="text-info text-center">Situation conjoint(e)</h3>
@@ -940,7 +940,7 @@
                   <div class="col-md">
 
                     <label for="">Situation actuelle : </label>
-                    <select class="form-select mb-3" id="sqsituPro">
+                    <select id="situationProConjointe" class="form-select mb-3">
                       <option disabled selected>Non défini</option>
                       <option>En activité</option>
                       <option>Sans profession</option>
@@ -951,7 +951,7 @@
 
                   <div class="col-md">
                     <label for="">Métier : </label>
-                    <input type="text" class="form-control mb-3" placeholder="ex : menuisier">
+                    <input id="metierConjoint" type="text" class="form-control mb-3" placeholder="ex : menuisier">
                   </div>
                 </div>
 
@@ -959,7 +959,7 @@
                   <div class="col-md">
                     <div class="form-check form-switch mb-3">
                       <label class="form-check-label" for="conjointDirigeant">Est il/elle dirigeant(e)?</label>
-                      <input class="form-check-input" type="checkbox" id="conjointDirigeant">
+                      <input id="conjointDirigeant" class="form-check-input" type="checkbox" >
                     </div>
                   </div>
                 </div>
@@ -967,17 +967,17 @@
                 <div id="conjointEntreprise" hidden>
                   <div class="row">
                     <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
+                      <input id="nomEntrepriseConjoint" type="text" class="form-control mb-3" placeholder="Dénomination de l'entreprise">
                     </div>
 
                     <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Forme juridique">
+                      <input id="formeJuridiqueEntrepriseConjoint" type="text" class="form-control mb-3" placeholder="Forme juridique">
                     </div>
                   </div>
 
                   <div class="row">
                     <div class="col-md">
-                      <input type="text" class="form-control mb-3" placeholder="Adresse du siège social">
+                      <input id="adresseEntrepriseConjoint" type="text" class="form-control mb-3" placeholder="Adresse du siège social">
                     </div>
                   </div>
 
@@ -995,7 +995,7 @@
                   <div class="col-md">
                     <label for="">Informations suceptibles d'influencer votre situation patrimoniale actuelle ou future</label>
                     <div class="input-group">
-                      <textarea class="form-control" aria-label="With textarea"></textarea>
+                      <textarea id="infoPro" class="form-control" aria-label="With textarea"></textarea>
                     </div>
                   </div>
                 </div>
