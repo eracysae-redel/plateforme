@@ -6,12 +6,6 @@ function writeUserPro () {
     const toggleConjoint = document.getElementById('conjointDirigeant');
     db.ref('users/' + user).child('Situation Professionnelle').set(null);
 
-    alert(user);
-    alert(conjoint);
-    alert(toggle.checked);
-    alert(toggleConjoint.checked);
-
-
     if(conjoint === 'Mariage' || conjoint === 'Pacs') {
         if(toggle.checked && toggleConjoint.checked) {
             db.ref('users/' + user + '/Situation Professionnelle').child('Situation Client').set({

@@ -52,11 +52,11 @@ function writeUserData() {
 
 const submit = document.getElementById('submitCivil');
 
-submit.addEventListener('click',function () {
+submit.addEventListener('click',function (e) {
 
     const getUser = getUserId();
     sessionStorage.setItem('userId',getUser);
-    alert(typeof sessionStorage.getItem('userId') + ' ' + sessionStorage.getItem('userId'));
+    e.preventDefault();
     writeUserData();
 
 });
