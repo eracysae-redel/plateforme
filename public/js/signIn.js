@@ -20,9 +20,9 @@ const signInWithEmailFunction = () => {
 
 const verifyEmail = () => {
     if(authSignIn.currentUser.emailVerified) {
-        window.location.assign('../public/mainBT5ALPHA.html');
+        window.location.assign('../mainBT5ALPHA.html');
     } else {
-        window.location.assign('../public/emailVerification.html');
+        window.location.assign('../emailVerification.html');
     }
 }
 

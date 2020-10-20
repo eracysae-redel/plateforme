@@ -5,7 +5,7 @@ const auth = firebase.auth();
 const signOutFunction = () => {
     auth.signOut()
         .then(() => {
-            window.location.assign('../public/index.html');
+            window.location.assign('../index.html');
         })
         .catch(error => {
             console.error(error);
