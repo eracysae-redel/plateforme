@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="654b144a-4aa1-4433-a4eb-01ef343cec22" name="Default Changelist" comment="Organisation des fichiers, règles de connexion interdite page 403.">
+      <change beforePath="$PROJECT_DIR$/public/js/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/signIn.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTTP Request" />
+        <option value="HTML File" />
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectId" id="1iER2FZTArWmp9FheTWUwNPbRbL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$USER_HOME$/Developpement/Developpement/Node" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JeanK\Documents\Site Matteo\plateforme\public" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="654b144a-4aa1-4433-a4eb-01ef343cec22" name="Default Changelist" comment="" />
+      <created>1601470555738</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1601470555738</updated>
+      <workItem from="1601470557082" duration="12891000" />
+      <workItem from="1601545862128" duration="3597000" />
+      <workItem from="1601636964752" duration="11485000" />
+      <workItem from="1602078463167" duration="11585000" />
+      <workItem from="1602152693683" duration="10594000" />
+      <workItem from="1602251232212" duration="1205000" />
+      <workItem from="1602257135717" duration="9000" />
+      <workItem from="1602676451456" duration="19147000" />
+      <workItem from="1602761930824" duration="20846000" />
+      <workItem from="1602787534186" duration="3000" />
+      <workItem from="1603110308885" duration="7694000" />
+      <workItem from="1603194632750" duration="3861000" />
+    </task>
+    <task id="LOCAL-00001" summary="Modification de la fonction writeUserData() en vérifiant la présence ou non d'un id. Rajout de la création d'un ID Unique.">
+      <created>1601478169796</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1601478169796</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Ajout des fonctions addChildren() et supprChildren() formView.js.&#10;DIV exemple pas encore créée.">
+      <created>1601482235168</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1601482235168</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Ajout Div exemple dans addChildren()">
+      <created>1601482648323</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1601482648323</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Modification fonction AddChildren. Test OK.">
+      <created>1601483225008</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1601483225008</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Changement de la card Enfant dans formView.js">
+      <created>1601640243818</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1601640243818</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Rajout onClick sur bouton supprimer enfant.">
+      <created>1601640403755</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1601640403755</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Modif formView.js">
+      <created>1601641298997</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1601641298997</updated>
+    </task>
+    <task id="LOCAL-00008" summary="OK.">
+      <created>1601641381360</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1601641381360</updated>
+    </task>
+    <task id="LOCAL-00009" summary="OK.">
+      <created>1601641395786</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1601641395786</updated>
+    </task>
+    <task id="LOCAL-00010" summary="OK.">
+      <created>1602079321248</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1602079321248</updated>
+    </task>
+    <task id="LOCAL-00011" summary="OK.">
+      <created>1602079479524</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1602079479524</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Boutons Toggle entreprise OK.">
+      <created>1602080716383</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1602080716383</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Modification pour ajout d'un envoi d'une formulaire Famille.">
+      <created>1602081973678</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1602081973678</updated>
+    </task>
+    <task id="LOCAL-00014" summary="ajout de la div conjointe si la personne est mariée ! Test OK.">
+      <created>1602083844963</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1602083844963</updated>
+    </task>
+    <task id="LOCAL-00015" summary="ajout de la div conjointe si la personne est mariée ! Test OK.">
+      <created>1602083938574</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1602083938574</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Réindentation de tout le html.">
+      <created>1602089524687</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1602089524688</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Panne réparée.">
+      <created>1602089675623</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1602089675623</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Indentation OK.">
+      <created>1602089793060</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1602089793060</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Indentation OK.">
+      <created>1602089935977</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1602089935977</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Ajout de la fonction séléction d'un bouton.Test OK.">
+      <created>1602166397057</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1602166397057</updated>
+    </task>
+    <task id="LOCAL-00021" summary="Ajout d'une classe au click d'un bouton.">
+      <created>1602166775551</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1602166775551</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Ajout d'une classe au click d'un bouton.">
+      <created>1602167351432</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1602167351432</updated>
+    </task>
+    <task id="LOCAL-00023" summary="Validation de la fonction SelectButton">
+      <created>1602168038465</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1602168038465</updated>
+    </task>
+    <task id="LOCAL-00024" summary="Validation de la fonction SelectButton">
+      <created>1602175120989</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1602175120989</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Intégration des données de la première partie de la situation Familliale. test OK.">
+      <created>1602704346673</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1602704346673</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Envoie des données de la situation familliale dans la base de données. Situation + Personnes à charge Test OK">
+      <created>1602763863424</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1602763863424</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Ajout du fichier envoiPro.js">
+      <created>1602768554796</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1602768554796</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Ajout de la fonction d'ajout du formulaire situation professionnelle dans la base de données.">
+      <created>1602770009600</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1602770009600</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Modification de l'envoi Pro et Test OK.">
+      <created>1602771831986</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1602771831986</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Modification de la sélection du bouton Revenu. Test OK.">
+      <created>1602773330179</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1602773330179</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Modification de tous les boutons de selection dans le formulaire situation Patrimoniale.">
+      <created>1602774312007</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1602774312007</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Modification de tous les boutons de selection dans le formulaire situation Patrimoniale. Version 2">
+      <created>1602774628750</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1602774628750</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Fonction d'ajout des données du formulaire de situation patrimoniale à la base de données. Test OK.">
+      <created>1602782691081</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1602782691081</updated>
+    </task>
+    <task id="LOCAL-00034" summary="Fonction d'ajout des données du formulaire de situation patrimoniale à la base de données. Test OK.">
+      <created>1602783131037</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1602783131037</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Remise en forme des fichiers js.">
+      <created>1602783216125</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1602783216125</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Ajout de la connection et l'enregistrement d'utilisateur par email et mot de passe OK. hosting sur firebase OK.">
+      <created>1603117409597</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1603117409597</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Organisation des fichiers, règles de connexion interdite page 403.">
+      <created>1603196415958</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1603196415958</updated>
+    </task>
+    <option name="localTasksCounter" value="38" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Changement de la card Enfant dans formView.js" />
+    <MESSAGE value="Rajout onClick sur bouton supprimer enfant." />
+    <MESSAGE value="Modif formView.js" />
+    <MESSAGE value="OK." />
+    <MESSAGE value="Boutons Toggle entreprise OK." />
+    <MESSAGE value="Modification pour ajout d'un envoi d'une formulaire Famille." />
+    <MESSAGE value="ajout de la div conjointe si la personne est mariée ! Test OK." />
+    <MESSAGE value="Réindentation de tout le html." />
+    <MESSAGE value="Panne réparée." />
+    <MESSAGE value="Indentation OK." />
+    <MESSAGE value="Ajout de la fonction séléction d'un bouton.Test OK." />
+    <MESSAGE value="Ajout d'une classe au click d'un bouton." />
+    <MESSAGE value="Validation de la fonction SelectButton" />
+    <MESSAGE value="Intégration des données de la première partie de la situation Familliale. test OK." />
+    <MESSAGE value="Envoie des données de la situation familliale dans la base de données. Situation + Personnes à charge Test OK" />
+    <MESSAGE value="Ajout du fichier envoiPro.js" />
+    <MESSAGE value="Ajout de la fonction d'ajout du formulaire situation professionnelle dans la base de données." />
+    <MESSAGE value="Modification de l'envoi Pro et Test OK." />
+    <MESSAGE value="Modification de la sélection du bouton Revenu. Test OK." />
+    <MESSAGE value="Modification de tous les boutons de selection dans le formulaire situation Patrimoniale." />
+    <MESSAGE value="Modification de tous les boutons de selection dans le formulaire situation Patrimoniale. Version 2" />
+    <MESSAGE value="Fonction d'ajout des données du formulaire de situation patrimoniale à la base de données. Test OK." />
+    <MESSAGE value="Remise en forme des fichiers js." />
+    <MESSAGE value="Ajout de la connection et l'enregistrement d'utilisateur par email et mot de passe OK. hosting sur firebase OK." />
+    <MESSAGE value="Organisation des fichiers, règles de connexion interdite page 403." />
+    <option name="LAST_COMMIT_MESSAGE" value="Organisation des fichiers, règles de connexion interdite page 403." />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1602252001867">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602252001867" />
+    <state x="184" y="86" key="MergeDialog" timestamp="1602168061376">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="184" y="86" key="MergeDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602168061376" />
+    <state x="598" y="281" key="MultipleFileMergeDialog" timestamp="1602168061383">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="598" y="281" key="MultipleFileMergeDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602168061383" />
+    <state x="755" y="222" key="RollbackChangesDialog" timestamp="1602087382731">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="755" y="222" key="RollbackChangesDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602087382731" />
+    <state x="735" y="434" key="VCS.EditChangelistDialog" timestamp="1602085494859">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="735" y="434" key="VCS.EditChangelistDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602085494859" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603197226256">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603197226256" />
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602770747260">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602770747260" />
+    <state x="582" y="118" width="585" height="888" key="find.popup" timestamp="1602087438657">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1338" y="118" width="585" height="888" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1601646986743" />
+    <state x="582" y="118" width="585" height="888" key="find.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602087438657" />
+  </component>
+</project>
