@@ -20,7 +20,28 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="654b144a-4aa1-4433-a4eb-01ef343cec22" name="Default Changelist" comment="Organisation des fichiers, règles de connexion interdite page 403.">
-      <change beforePath="$PROJECT_DIR$/public/js/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/js/signIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/cardEnfants.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/cardEnfants.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/envoi_FS.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/envoi_FS.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/403.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/403.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/envoiFs.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/sendData/envoiFs.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/envoiMatri.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/sendData/envoiMatri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/envoiPatri.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/sendData/envoiPatri.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/envoiPro.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/sendData/envoiPro.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/exportPDF.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/forbidden.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/forbidden.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/lisu.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/main.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/signIn.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/signout.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/signout.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/main.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/main1.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/main1.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/mainBT5ALPHA.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mainBT5ALPHA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/pro.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/pro.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/zdt.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/zdt.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +99,8 @@
       <workItem from="1602761930824" duration="20846000" />
       <workItem from="1602787534186" duration="3000" />
       <workItem from="1603110308885" duration="7694000" />
-      <workItem from="1603194632750" duration="3861000" />
+      <workItem from="1603194632750" duration="3998000" />
+      <workItem from="1603285738055" duration="2132000" />
     </task>
     <task id="LOCAL-00001" summary="Modification de la fonction writeUserData() en vérifiant la présence ou non d'un id. Rajout de la création d'un ID Unique.">
       <created>1601478169796</created>
@@ -339,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1603196415958</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="Organisation des fichiers, règles de connexion interdite page 403.">
+      <created>1603200506672</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1603200506672</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,10 +435,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="434" key="VCS.EditChangelistDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602085494859" />
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603197226256">
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603200514406">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603197226256" />
+    <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603200514406" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602770747260">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
