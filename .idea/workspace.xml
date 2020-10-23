@@ -22,14 +22,9 @@
     <list default="true" id="654b144a-4aa1-4433-a4eb-01ef343cec22" name="Default Changelist" comment="Réorganisation de l'arborescence fichiers">
       <change beforePath="$PROJECT_DIR$/.firebase/hosting.cHVibGlj.cache" beforeDir="false" afterPath="$PROJECT_DIR$/.firebase/hosting.cHVibGlj.cache" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database.rules.json" beforeDir="false" afterPath="$PROJECT_DIR$/database.rules.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/httpCode/403.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/httpCode/404.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/authFB/forbidden.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/forbidden.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/authFB/signIn.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/signIn.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/authFB/signout.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/signout.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/emailVerification.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/emailVerification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/mainBT5ALPHA.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/mainBT5ALPHA.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/authFB/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/public/authFB/login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/httpCode/403.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/403.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/httpCode/404.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/404.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,10 +60,10 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\JeanK\Documents\Site Matteo\plateforme\public" />
       <recent name="D:\JeanK\Documents\Site Matteo\plateforme\public\httpCode" />
       <recent name="D:\JeanK\Documents\Site Matteo\plateforme\public\sendData" />
       <recent name="D:\JeanK\Documents\Site Matteo\plateforme\public\authFB" />
-      <recent name="D:\JeanK\Documents\Site Matteo\plateforme\public" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -93,7 +88,7 @@
       <workItem from="1603194632750" duration="3998000" />
       <workItem from="1603285738055" duration="5924000" />
       <workItem from="1603312693022" duration="1688000" />
-      <workItem from="1603367213459" duration="2905000" />
+      <workItem from="1603367213459" duration="4351000" />
     </task>
     <task id="LOCAL-00001" summary="Modification de la fonction writeUserData() en vérifiant la présence ou non d'un id. Rajout de la création d'un ID Unique.">
       <created>1601478169796</created>
@@ -375,7 +370,21 @@
       <option name="project" value="LOCAL" />
       <updated>1603289483211</updated>
     </task>
-    <option name="localTasksCounter" value="41" />
+    <task id="LOCAL-00041" summary="Réorganisation de l'arborescence fichiers">
+      <created>1603376015313</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1603376015314</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Réorganisation de l'arborescence fichiers">
+      <created>1603376027653</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1603376027653</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,10 +455,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="735" y="434" key="VCS.EditChangelistDialog/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1602085494859" />
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603289504094">
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2" timestamp="1603376031445">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
-    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603289504094" />
+    <state x="-1368" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1603376031445" />
     <state x="552" y="253" key="Vcs.Push.Dialog.v2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1603200514406" />
     <state x="777" y="434" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1602770747260">
       <screen x="0" y="0" width="1920" height="1040" />

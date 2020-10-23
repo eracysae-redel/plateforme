@@ -24,7 +24,7 @@ const signUpFunction = () => {
 const sendVerificationEmail = () => {
     auth.currentUser.sendEmailVerification()
         .then(() => {
-            window.location.assign('../mainBT5ALPHA.html')
+            window.location.assign('../emailVerification.html')
         })
         .catch(error => {
             console.error(error);
