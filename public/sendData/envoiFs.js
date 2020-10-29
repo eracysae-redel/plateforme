@@ -1,20 +1,15 @@
-
-
-
-// La fonction getUserId vient récupérer la première lettre du prénom et le nom pour créer un seul ID.
 function getUserId() {
 
-  if(document.getElementById('nom').value && document.getElementById('prenom').value ) {
+    if (document.getElementById('nom').value && document.getElementById('prenom').value) {
 
-    const firstLetter = document.getElementById('nom').value.substring(0, 1).toUpperCase();
-    const name = document.getElementById('prenom').value.toUpperCase();
-
-    return firstLetter + name;
-
-  } else {
-      return 0;
-  }
-
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                return user.uid;
+            } else {
+                return 0;
+            }
+        });
+    }
 }
 
 function writeUserData() {

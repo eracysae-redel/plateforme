@@ -8,8 +8,8 @@
     ],
     "rewrites" : [
       {
-        "source": "/login",
-        "destination" : "/login.html"
+        "source": "/index",
+        "destination" : "/index.html"
       },
       {
         "source": "/mainBT5ALPHA",

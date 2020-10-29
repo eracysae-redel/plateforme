@@ -1,7 +1,16 @@
-let user = firebase.auth().currentUser;
-document.addEventListener('DOMContentLoaded', function() {
-    if(!user) {
-        console.error('403 forbidden');
-        window.location.assign('403.html');
-    }
-});
+const forbidden = () => {
+    auth.onAuthStateChanged(function(user) {
+        if (user && auth.currentUser.emailVerified) {
+            console.log('User ' + user.email + ' connected !');
+        } else {
+            console.error('No user is signed in.');
+            window.location.assign('403.html');
+        }
+    });
+}
+
+window.onload = () => {
+    forbidden();
+}
+
+

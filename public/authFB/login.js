@@ -6,6 +6,10 @@ const auth = firebase.auth();
 
 auth.useDeviceLanguage();
 
+let actionCodeSettings = {
+    url: 'https://plateforme-96b58.web.app/',
+    handleCodeInApp: true,
+};
 
 
 const signUpFunction = () => {
@@ -17,14 +21,14 @@ const signUpFunction = () => {
         sendVerificationEmail();
     })
         .catch(error => {
-        console.error(error)
+        console.error(error);
     })
 }
 
 const sendVerificationEmail = () => {
-    auth.currentUser.sendEmailVerification()
+    auth.currentUser.sendEmailVerification(actionCodeSettings)
         .then(() => {
-            window.location.assign('../emailVerification.html')
+            window.location.assign('emailVerification.html');
         })
         .catch(error => {
             console.error(error);

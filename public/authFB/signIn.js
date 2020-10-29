@@ -18,11 +18,15 @@ const signInWithEmailFunction = () => {
         })
 }
 
+
+
 const verifyEmail = () => {
     if(authSignIn.currentUser.emailVerified) {
         window.location.assign('mainBT5ALPHA.html');
+        alert(authSignIn.currentUser.emailVerified);
     } else {
         window.location.assign('emailVerification.html');
+        alert(authSignIn.currentUser.emailVerified);
     }
 }
 
