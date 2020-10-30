@@ -1,65 +1,30 @@
 <!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>SignIn</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha2/css/bootstrap.min.css" integrity="sha384-DhY6onE6f3zzKbjUPRc2hOzGAdEf4/Dz+WJwBvEYL/lkkIsI3ihufq9hk9K4lVoK" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.css">
-  <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css" rel="stylesheet">
 </head>
 <body>
-<div class="container">
+<div class="container" id="sign-in-card">
+  <form class="NUMERO TEL" id="sign-in-form">
+    <input id="phone-number" type="text" pattern="\+[0-9\s\-\(\)]+" placeholder="PHONE NUMBER">
+    <button disabled class="btn btn-primary" id="sign-in-button">SignIn</button>
+  </form>
 
-      <!-- Container for the demo -->
-      <div id="sign-in-card" class="form-signin">
-          <form id="sign-in-form" class="row text-center needs-validation">
-            <!-- Input to enter the phone number -->
-            <div class="col-4">
-              <label for="exampleFormControlInput1" class="form-label">Email address</label>
-              <input class="form-control" type="text" pattern="\+[0-9\s\-\(\)]+" placeholder="ex : +336 11 22 33 44" id="phone-number">
-                <div class="invalid-feedback">Le format doit être international ex: (+33)6 11 22 33 44
-                </div>
-            </div>
-            <button disabled class="btn btn-primary" id="sign-in-button">Sign-in</button>
-          </form>
+  <button class="btn btn-primary" id="sign-out-button">SignOut</button>
 
-          <!-- Button that handles sign-out -->
-          <div class="row">
-            <button hiddent class="btn btn-primary" id="sign-out-button">Deconnexion</button>
-          </div>
+<form id="verification-code-form" class="CODE VALIDATION">
+  <input id="verification-code" type="text" placeholder="VERIFY">
+  <button class="btn btn-primary" id="verify-code-button" type="button" name="button">VERIFIER</button>
+  <button class="btn btn-primary" id="cancel-verify-code-button" type="button" name="button">Pas reçu?</button>
+</form>
 
-          <form id="verification-code-form" action="#">
-            <!-- Input to enter the verification code -->
-            <div class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label">
-              <input class="mdl-textfield__input" type="text" id="verification-code">
-              <label class="mdl-textfield__label" for="verification-code">Enter the verification code...</label>
-            </div>
-
-            <!-- Button that triggers code verification -->
-            <input type="submit" class="btn btn-primary" id="verify-code-button" value="Verify Code"/>
-            <!-- Button to cancel code verification -->
-            <button class="btn btn-dismiss" id="cancel-verify-code-button">Cancel</button>
-          </form>
-        </div>
-      </div>
-
-      <!-- Container for the sign in status and user info -->
-      <div  id="user-details-card" class="row">
-        <div class="mdl-card__title mdl-color--light-blue-600 mdl-color-text--white">
-          <h2 class="mdl-card__title-text">User sign-in status</h2>
-        </div>
-        <div class="mdl-card__supporting-text mdl-color-text--grey-600">
-          <!-- Container where we'll display the user details -->
-          <div class="user-details-container">
-            Firebase sign-in status: <span id="sign-in-status">Unknown</span>
-            <div>Firebase auth <code>currentUser</code> object value:</div>
-            <pre><code id="account-details">null</code></pre>
-          </div>
-        </div>
-      </div>
-    </div>
 </div>
+
 
 <!-- Import and configure the Firebase SDK -->
 <!-- These scripts are made available when the app is served or deployed on Firebase Hosting -->
