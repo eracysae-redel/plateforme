@@ -9,18 +9,20 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
 <div class="container" id="sign-in-card">
-  <form class="NUMERO TEL" id="sign-in-form">
+
+<form class="NUMERO TEL" id="sign-in-form">
     <input id="phone-number" type="text" pattern="\+[0-9\s\-\(\)]+" placeholder="PHONE NUMBER">
     <button disabled class="btn btn-primary" id="sign-in-button">SignIn</button>
-  </form>
+</form>
 
-  <button class="btn btn-primary" id="sign-out-button">SignOut</button>
+<button class="btn btn-primary" id="sign-out-button">SignOut</button>
 
 <form id="verification-code-form" class="CODE VALIDATION">
   <input id="verification-code" type="text" placeholder="VERIFY">
-  <button class="btn btn-primary" id="verify-code-button" type="button" name="button">VERIFIER</button>
-  <button class="btn btn-primary" id="cancel-verify-code-button" type="button" name="button">Pas reçu?</button>
+  <button id="verify-code-button"  class="btn btn-primary"  type="button" name="button">VERIFIER</button>
+  <button id="cancel-verify-code-button"  class="btn btn-primary"  type="button" name="button">Pas reçu?</button>
 </form>
 
 </div>
