@@ -14,12 +14,13 @@
 
       <!-- Container for the demo -->
       <div id="sign-in-card" class="container">
-          <form id="sign-in-form">
+          <form id="sign-in-form" class="row needs-validation">
             <!-- Input to enter the phone number -->
             <div class="col">
               <label for="exampleFormControlInput1" class="form-label">Email address</label>
               <input class="form-control" type="text" pattern="\+[0-9\s\-\(\)]+" placeholder="ex : +336 11 22 33 44" id="phone-number">
-              <span class="mdl-textfield__error">Le format doit être international ex: (+33)6 11 22 33 44</span>
+                <div class="invalid-feedback">Le format doit être international ex: (+33)6 11 22 33 44
+                </div>
             </div>
             <button disabled class="btn btn-primary" id="sign-in-button">Sign-in</button>
           </form>
